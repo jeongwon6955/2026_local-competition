@@ -3,3 +3,240 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* 로고 FONT 한컴 말랑말랑 Bold */
+:root {
+    --main-color: #3a5f45;
+    --sub-color: #4a5568;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+/* 컨테이너 크기 */
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* 스크롤 제어 */
+body:has(#login:checked) {
+    overflow: hidden;
+}
+
+/* 헤더영역 */
+header {
+    width: 100%;
+    height: 130px;
+    padding-inline: 30px;
+    border-bottom: 1px solid var(--main-color);
+    font-size: 18px;
+    color: var(--sub-color);
+    /* 로그인/회원가입 */
+    .user {
+        width: 100%;
+        height: 50px; 
+        display: flex;
+        justify-content: right;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        div {
+            align-content: center;
+            padding-inline: 20px;
+            transition: all 0.1s;
+        }
+        /* 로그인 호버 했을때 이벤트 */
+        .sign_in:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+        }
+        p {
+            align-content: center;
+        }
+    }
+    /* 로그인 input 체크 했을 때 이벤트 */
+    #login:checked ~ .popup {
+        visibility: visible;
+        opacity: 1;
+    }
+    /* 모달형 레이어 팝업창 */
+    .popup {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: grid;
+        visibility: hidden;
+        opacity: 0;
+        place-items: center;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(0,0,0,0.5);
+        transition: all 0.4s;
+        .popup_box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 350px;
+            height: 430px;
+            background-color: white;
+            border-radius: 30px;
+            padding: 50px 40px;
+            box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
+            /* 로고 */
+            img {
+                display: block;
+                width: 200px;
+                margin: 0 auto;
+            }
+            /* 이메일/비밀번호 */
+            .popup_wrapper {
+                position: relative;
+                input {
+                    position: relative;
+                    z-index: 2;
+                    width: 100%;
+                    border: none;
+                    border-bottom: 1px solid rgba(0,0,0,0.4);
+                    padding: 10px;
+                    outline: none;
+                    margin-bottom: 35px;
+                    background-color: transparent;
+                    /* 이메일/비밀번호 input 클릭하거나(focus) 입력값(vaild)이 있을 때 이벤트*/
+                    &:focus ~ span,
+                    &:valid ~ span {
+                        top: -18px;
+                        font-size: 12px;
+                        color: var(--main-color);
+                        font-weight: bold;
+                    }
+                    &:focus,
+                    &:valid {
+                        border-bottom: 2px solid var(--main-color);
+                    }
+                }
+                span {
+                    position: absolute;
+                    top: 5px;
+                    left: 10px;
+                    font-size: 15px;
+                    color: #b8b8b8;
+                    transition: all 0.2s;
+                }
+            }
+            /* 로그인 버튼 */
+            button {
+                width: 100%;
+                box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+                padding: 10px;
+                border-radius: 50px;
+                background-color: white;
+                font-size: 18px;
+                font-weight: bold;
+                transition: all 0.2s;
+                /* 버튼 호버 했을 때 이벤트 */
+                &:hover {
+                    background-color: var(--main-color);
+                    color: white;
+                    box-shadow: inset 3px 3px 3px 3px rgba(0,0,0,0.1);
+                }
+            }
+            /* 닫기 버튼 */
+            .close_btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 20px;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    /* 헤더 아래 영역 로고/네비게이션 */
+    .h_bottom {
+        display: flex;
+        height: 80px;
+        justify-content: space-between;
+        /* 로고 */
+        .logo {
+            align-content: center;
+            img {
+                width: 130px;
+                height: 60px;
+            }
+        }
+        /* 네비게이션 */
+        .nav {
+            .menu {
+                display: flex;
+                height: 100%;
+                li {
+                    padding-inline: 20px;
+                    align-content: center;
+                    a {
+                        display: block;
+                        height: 100%;
+                        align-content: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 푸터 영역 */
+footer {
+    width: 100%;
+    height: 400px;
+    background-color: #222;
+    padding: 40px 80px;
+    color: var(--main-color);
+    .f_top {
+        display: flex;
+        justify-content: space-between;
+        height: 80%;
+        .f_left {
+            img {
+                width: 170px;
+                height: 90px;
+            }
+        }
+        .f_right {
+            display: flex;
+            ul {
+                padding-inline: 30px;
+                .f_h {
+                    font-weight: bold;
+                    font-size: 17px;
+                    margin-bottom: 30px;
+                }
+                li {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .f_bottom {
+        height: 20%;
+        border-top: 1px solid #888888;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        font-size: 13px;
+        color: var(--sub-color);
+    }
+}
