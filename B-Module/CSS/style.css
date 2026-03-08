@@ -234,9 +234,10 @@ footer {
         }
         /* 푸터 오른쪽 내용 */
         .f_right {
+            width: 80%;
             display: flex;
+            justify-content: space-between;
             ul {
-                padding-inline: 30px;
                 .f_h {
                     font-weight: bold;
                     font-size: 17px;
