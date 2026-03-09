@@ -44,6 +44,9 @@
             color: white;
             font-size: 30px;
             cursor: pointer;
+            &:hover {
+                color: red;
+            }
         }
         img {
             width: 100%;

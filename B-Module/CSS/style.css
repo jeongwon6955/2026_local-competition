@@ -8,7 +8,9 @@
 /* 로고 FONT 한컴 말랑말랑 Bold */
 :root {
     --main-color: #3a5f45;
+    --main-light: #5f8f6a;
     --sub-color: #4a5568;
+    --gray-muted: #9aa5a1;
 }
 
 li {
@@ -219,7 +221,8 @@ footer {
     height: 400px;
     background-color: #222;
     padding: 40px 80px;
-    color: var(--main-color);
+    color: var(--main-light);
+    border: 1px solid var(--main-color);
     /* 푸터 위 로고/내용 */
     .f_top {
         display: flex;
@@ -266,6 +269,6 @@ footer {
         justify-content: space-between;
         padding-top: 20px;
         font-size: 13px;
-        color: var(--sub-color);
+        color: var(--gray-muted);
     }
 }
