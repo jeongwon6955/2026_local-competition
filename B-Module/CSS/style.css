@@ -201,14 +201,76 @@ header {
             .menu {
                 display: flex;
                 height: 100%;
-                li {
-                    padding-inline: 20px;
+                .submenu {
+                    position: absolute;
+                    top: 120px;
+                    width: 200px;
+                    padding: 30px 20px;
                     align-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    background-color: white;
+                    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
+                    transition: all 0.2s;
+                    &:hover {
+                        opacity: 1 !important;
+                        visibility: visible !important;
+                    }
+                    li {
+                        a {
+                            padding: 20px 10px;
+                            transition: all 0.2s;
+                            &:hover {
+                                background-color: rgb(95, 143, 106, 0.1) ;
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+                li {
+                    align-content: center;
+                    transition: all 0.2s;
                     a {
+                        padding-inline: 20px;
                         display: block;
                         height: 100%;
                         align-content: center;
+                        position: relative;
+                        i {
+                            font-size: 10px;
+                            position: absolute;
+                            transition: all 0.2s;
+                        }
+                        &:hover {
+                            transform: scale(1.1);
+                            font-weight: bold;
+                        }
+                        .fa-minus {
+                            visibility: hidden;
+                        }
+                        &:focus .fa-plus {
+                            transform: rotate(90deg);
+                        }
+                        &:focus .fa-plus {
+                            transition-delay: 0.3s;
+                            visibility: hidden;
+                        }
+                        &:focus .fa-minus {
+                            visibility: visible;
+                            transition-delay: 0.5s;
+                        }
+                        &:focus ~ .submenu {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        &:not(:hover) ~ .submenu {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
                     }
+                }
+                .m_bar {
+                    padding-inline: 20px;
                 }
             }
         }

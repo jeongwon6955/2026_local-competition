@@ -21,6 +21,7 @@
 .infor_popup_box {
     /* 외부 배경 */
     position: fixed;
+    z-index: 999;
     width: 100%;
     height: 100vh;
     background-color: rgba(0,0,0,0.8);
@@ -59,7 +60,7 @@
             height: calc(100% - 300px);
             justify-content: space-between;
             flex-direction: column;
-            padding: 30px;
+            padding: 20px 30px 30px 30px;
             .ip_title {
                 font-size: 18px;
                 font-weight: bold;
