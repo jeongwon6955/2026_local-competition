@@ -1,6 +1,7 @@
 #visual {
     width: 100%;
     height: calc(100vh - 130px);
+    max-height: 900px;
     .slider {
         position: relative;
         width: 100%;
@@ -17,6 +18,12 @@
             z-index: 10;
         }
         &:hover .slides {
+            animation-play-state: paused;
+        }
+        &:hover .v_bar-box > div::after {
+            animation-play-state: paused;
+        }
+        &:hover .v_text-box > h1 {
             animation-play-state: paused;
         }
         &:hover .stop_btnbox > .stop_btn > .fa-play {
@@ -47,6 +54,58 @@
                 .fa-play {
                     display: none;
                 }
+            }
+        }
+        .v_bar-box {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            z-index: 12;
+            div {
+                width: 60px;
+                height: 5px;
+                background-color: rgba(255,255,255,0.6);
+                border-radius: 50px;
+                &::after {
+                    content: '';
+                    width: 60px;
+                    height: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: var(--main-light);
+                    border-radius: 50px;
+                    animation: slide_bar 9s infinite;
+                    z-index: 10;
+                }
+            }
+        }
+        .v_text-box {
+            h1 {
+                position: absolute;
+                bottom: 30px;
+                left: 30px;
+                z-index: 10;
+                color: white;
+                font-size: 50px;
+                font-weight: lighter;
+                span {
+                    font-weight: bold;
+                }
+            }
+            .v_text1 {
+                animation: slide_text1 9s infinite;
+            }
+
+            .v_text2 {
+                animation: slide_text2 9s infinite;
+            }
+
+            .v_text3 {
+                animation: slide_text3 9s infinite;
             }
         }
         .stop_btnbox::before {
@@ -106,5 +165,101 @@
     }
     99.999% {
         transform: translateX(0);
+    }
+}
+
+@keyframes slide_bar {
+    0% {
+        left: 0;
+    }
+    32% {
+        left: 0;
+    }
+    33.333% {
+        left: 80px;
+    }
+    65% {
+        left: 80px;
+    }
+    66.666% {
+        left: 160px;
+    }
+    98% {
+        left: 160px;
+    }
+    99.999% {
+        left: 0;
+    }
+}
+
+@keyframes slide_text1 {
+    0% {
+        opacity: 1;
+    }
+    32% {
+        opacity: 1;
+    }
+    33.333% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 0;
+    }
+    66.666% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 0;
+    }
+    99.999% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide_text2 {
+    0% {
+        opacity: 0;
+    }
+    32% {
+        opacity: 0;
+    }
+    33.333% {
+        opacity: 1;
+    }
+    65% {
+        opacity: 1;
+    }
+    66.666% {
+        opacity: 0;
+    }
+    98% {
+        opacity: 0;
+    }
+    99.999% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide_text3 {
+    0% {
+        opacity: 0;
+    }
+    32% {
+        opacity: 0;
+    }
+    33.333% {
+        opacity: 0;
+    }
+    65% {
+        opacity: 0;
+    }
+    66.666% {
+        opacity: 1;
+    }
+    98% {
+        opacity: 1;
+    }
+    99.999% {
+        opacity: 0;
     }
 }
