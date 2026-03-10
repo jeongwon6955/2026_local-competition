@@ -1,0 +1,110 @@
+#visual {
+    width: 100%;
+    height: calc(100vh - 130px);
+    .slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        &:hover .slides {
+            animation-play-state: paused;
+        }
+        &:hover .stop_btnbox > .stop_btn > .fa-play {
+            display: block;
+        } 
+        &:hover .stop_btnbox > .stop_btn > .fa-grip-lines-vertical {
+            display: none;
+        } 
+        .stop_btnbox {
+            width: 140px;
+            height: 120px;
+            position: absolute;
+            z-index: 10;
+            background-color: white;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 30px;
+            align-content: center;
+            .stop_btn {
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0,0,0,0.1);
+                border-radius: 50px;
+                margin-inline: 20px;
+                display: grid;
+                place-items: center;
+                font-size: 40px;
+                .fa-play {
+                    display: none;
+                }
+            }
+        }
+        .stop_btnbox::before {
+            content: '';
+            position: absolute;
+            bottom: 120px;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            clip-path: path('M 0 50 L 50 50 L 50 0 Q 50 50 0 50 Z');
+        }
+        .stop_btnbox::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 140px;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            clip-path: path('M 0 50 L 50 50 L 50 0 Q 50 50 0 50 Z');
+        }
+        .slides {
+            width: 300%;
+            display: flex;
+            animation: slide 9s infinite;
+            .slide {
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 100vh;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    32% {
+        transform: translateX(0);
+    }
+    33.333% {
+        transform: translateX(-33.3333%);
+    }
+    65% {
+        transform: translateX(-33.3333%);
+    }
+    66.666% {
+        transform: translateX(-66.66666%);
+    }
+    98% {
+        transform: translateX(-66.66666%);
+    }
+    99.999% {
+        transform: translateX(0);
+    }
+}
