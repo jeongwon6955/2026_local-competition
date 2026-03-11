@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/popup.css">
     <link rel="stylesheet" href="../CSS/visual.css">
+    <link rel="stylesheet" href="../CSS/news&favor&program.css">
     <link rel="stylesheet" href="../../RES/fontawesome/css/all.css">
     <title>스킬스북도서관</title>
 </head>
@@ -105,22 +106,98 @@
         <!-- 비주얼 영역 -->
         <section id="visual">
             <div class="slider">
+                <!-- 재생 여부 확인 영역 -->
                 <div class="stop_btnbox"><div class="stop_btn"><i class="fa-solid fa-play"></i><i class="fa-solid fa-grip-lines-vertical"></i></div></div>
+                <!-- 재생 바 -->
                 <div class="v_bar-box">
                     <div class="v_bar1"></div>
                     <div class="v_bar2"></div>
                     <div class="v_bar3"></div>
                 </div>
+                <!-- 텍스트 -->
                 <div class="v_text-box">
                     <h1 class="v_text1"><span>당신의 기술에 깊이를,</span> <br> 숙련의 가치를 페이지로 잇다</h1>
                     <h1 class="v_text2"><span>기술인의 어제와 내일이 만나는 곳,</span> <br> 스킬스북에서 열리다</h1>
                     <h1 class="v_text3"><span>장인의 손끝에서 시민의 일상까지,</span> <br> 모두를 위한 기술 도서관</h1>
                 </div>
+                <!-- 이미지 슬라이드 -->
                 <div class="slides">
                     <div class="slide"><img src="../../RES/images/images (43).jpg" alt="도서관" title="도서관"></div>
                     <div class="slide"><img src="../../RES/images/images (51).jpg" alt="도서관" title="도서관"></div>
                     <div class="slide"><img src="../../RES/images/images (53).jpg" alt="도서관" title="도서관"></div>
                 </div>
+            </div>
+        </section>
+        <!-- 도서관소식 영역 -->
+        <section id="news" class="c_box">
+            <h1 class="title"><span>도서관</span> 소식</h1>
+            <div class="n_notice">
+                <input type="radio" name="tab" id="n_tab1" hidden checked>
+                <input type="radio" name="tab" id="n_tab2" hidden>
+                <input type="radio" name="tab" id="n_tab3" hidden>
+                <div class="n_tab_box">
+                    <h2>일반공지</h2>
+                    <h2>행사안내</h2>
+                    <h2>채용공지</h2>
+                    <div>
+                        <button type="button"><label for="n_tab1">일반공지</label></button>
+                        <button type="button"><label for="n_tab2">행사안내</label></button>
+                        <button type="button"><label for="n_tab3">채용공지</label></button>
+                    </div>
+                </div>
+                <div class="n_content">
+                    <ul class="n_text1">
+                        <li><p>더운 여름 힘내요 – 연구정보실 개실 6주년 기념이벤트 당첨자 발표</p><p>2024-08-08</p></li>
+                        <li><p>더운 여름 힘내요 – 연구정보실 개실 6주년 기념이벤트</p><p>2024-07-24</p></li>
+                        <li><p>연구자를 위한 텍스트 마이닝(심화) 교육생 모집 안내</p><p>2024-07-17</p></li>
+                        <li><p>「실감체험관」 전국민 소문내기 이벤트 당첨자 발표</p><p>2024-05-14</p></li>
+                        <li><p>디지털인문학과 네트워크 분석 교육생 모집 안내</p><p>2024-08-08</p></li>
+                        <li><p>스킬스북도서관 -「청년 디지털 봉사단 ‘잇(IT)다’5기」- 최종 합격자 발표</p><p>2024-05-10</p></li>
+                    </ul>
+                    <ul class="n_text2">
+                        <li><p>2024년 제9회 「월간 인문학을 만나다」 강연 안내</p><p>2024-08-08</p></li>
+                        <li><p>「스킬스북도서관이 간식박스 쏩니다!」7월 당첨 발표</p><p>2024-08-07</p></li>
+                        <li><p>별 헤는 「실감체험관」이벤트</p><p>2024-07-25</p></li>
+                        <li><p>2024년 제8회 「월간 인문학을 만나다」 강연 안내</p><p>2024-07-15</p></li>
+                        <li><p>스킬스북도서관이 간식박스 쏩니다!</p><p>2024-07-02</p></li>
+                        <li><p>2024년 제7회 「월간 인문학을 만나다」 강연 안내</p><p>2024-07-01</p></li>
+                    </ul>
+                    <ul class="n_text3">
+                        <li><p>2024년 사서직 공무원 경력경쟁채용 필기시험 정답가안 공개 및 이의제기 안내</p><p>2024-08-03</p></li>
+                        <li><p>스킬스북도서관 공무직 근로자(미화) 채용 서류전형 합격자 및 면접전형 공고</p><p>2024-08-02</p></li>
+                        <li><p>2024년도 사서직 공무원 경력경쟁채용 필기시험 일정 ‧ 장소 및 응시자 준수사항 공고</p><p>2024-07-26</p></li>
+                        <li><p>스킬스북도서관 공무직 근로자(미화) 채용공고(재재공고)</p><p>2024-07-24</p></li>
+                        <li><p>스킬스북도서관 국가서지과 공무직 근로자 채용 최종 합격자 공고</p><p>2024-07-188</p></li>
+                        <li><p>스킬스북도서관 국가서지과 기간제 근로자(휴직대체) 채용 최종합격자 공고</p><p>2024-07-16</p></li>
+                        <li><p>스킬스북도서관 국가서지과 공무직 근로자 채용 서류전형(1차) 합격자 발표 및 면접시험(2차) 계획 공고</p><p>2024-07-05</p></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- 즐겨찾기 영역 -->
+        <section id="favor" class="c_box">
+            <h1 class="title"><span>자주찾는</span> 메뉴</h1>
+            <div class="fv_box">
+                <div><img src="../../RES/images/icon2.png" alt="icon" title="icon"><p>도서대출</p></div>
+                <div><img src="../../RES/images/icon.png" alt="icon" title="icon"><p>도서반납</p></div>
+                <div><img src="../../RES/images/icon3.png" alt="icon" title="icon"><p>희망도서선정</p></div>
+                <div><img src="../../RES/images/icon4.png" alt="icon" title="icon"><p>AI추천도서</p></div>
+                <div><img src="../../RES/images/icon5.png" alt="icon" title="icon"><p>전자도서관</p></div>
+                <div><img src="../../RES/images/icon6.png" alt="icon" title="icon"><p>좌석예약</p></div>
+            </div>
+        </section>
+        <!-- 프로그램 영역 -->
+        <section id="program" class="c_box">
+            <h1 class="title"><span>프로그램</span></h1>
+            <div class="p_box">
+                <div style="margin: 0;"><img src="../../RES/프로그램/1.jpg" alt="1" title="1"></div>
+                <div><img src="../../RES/프로그램/2.png" alt="2" title="2"></div>
+                <div><img src="../../RES/프로그램/3.jpg" alt="3" title="3"></div>
+                <div><img src="../../RES/프로그램/4.png" alt="4" title="4"></div>
+                <div><img src="../../RES/프로그램/5.jpg" alt="5" title="5"></div>
+                <div><img src="../../RES/프로그램/6.jpg" alt="6" title="6"></div>
+                <div><img src="../../RES/프로그램/7.jpg" alt="7" title="7"></div>
+                <div><img src="../../RES/프로그램/8.jpg" alt="8" title="8"></div>
             </div>
         </section>
         <!-- 푸터 영역 -->

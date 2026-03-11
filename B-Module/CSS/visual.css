@@ -17,21 +17,26 @@
             left: 0;
             z-index: 10;
         }
+        /* 호버 시 슬라이드 애니메이션 정지 */
         &:hover .slides {
             animation-play-state: paused;
         }
+        /* 호버 시 재생 바 애니메이션 정지 */
         &:hover .v_bar-box > div::after {
             animation-play-state: paused;
         }
+        /* 호버 시 텍스트 애니메이션 정지 */
         &:hover .v_text-box > h1 {
             animation-play-state: paused;
         }
+        /* 호버시 재생 여부 확인 디자인 변경 */
         &:hover .stop_btnbox > .stop_btn > .fa-play {
             display: block;
         } 
         &:hover .stop_btnbox > .stop_btn > .fa-grip-lines-vertical {
             display: none;
         } 
+        /* 재생 여부 확인 영역 */
         .stop_btnbox {
             width: 140px;
             height: 120px;
@@ -56,6 +61,27 @@
                 }
             }
         }
+        .stop_btnbox::before {
+            content: '';
+            position: absolute;
+            bottom: 120px;
+            right: 0px;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            clip-path: path('M 0 50 L 50 50 L 50 0 Q 50 50 0 50 Z');
+        }
+        .stop_btnbox::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 140px;
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            clip-path: path('M 0 50 L 50 50 L 50 0 Q 50 50 0 50 Z');
+        }
+        /* 재생 바 */
         .v_bar-box {
             position: absolute;
             bottom: 20px;
@@ -83,6 +109,7 @@
                 }
             }
         }
+        /* 텍스트 */
         .v_text-box {
             h1 {
                 position: absolute;
@@ -108,26 +135,6 @@
                 animation: slide_text3 9s infinite;
             }
         }
-        .stop_btnbox::before {
-            content: '';
-            position: absolute;
-            bottom: 120px;
-            right: 0px;
-            width: 50px;
-            height: 50px;
-            background-color: #ffffff;
-            clip-path: path('M 0 50 L 50 50 L 50 0 Q 50 50 0 50 Z');
-        }
-        .stop_btnbox::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 140px;
-            width: 50px;
-            height: 50px;
-            background-color: #ffffff;
-            clip-path: path('M 0 50 L 50 50 L 50 0 Q 50 50 0 50 Z');
-        }
         .slides {
             width: 300%;
             display: flex;
@@ -144,6 +151,7 @@
     }
 }
 
+/* 이미지 슬라이드 키프레임 */
 @keyframes slide {
     0% {
         transform: translateX(0);
@@ -168,6 +176,7 @@
     }
 }
 
+/* 재생 바 키프레임 */
 @keyframes slide_bar {
     0% {
         left: 0;
@@ -192,6 +201,7 @@
     }
 }
 
+/* 텍스트 키프레임 1 */
 @keyframes slide_text1 {
     0% {
         opacity: 1;
@@ -216,6 +226,7 @@
     }
 }
 
+/* 텍스트 키프레임 2 */
 @keyframes slide_text2 {
     0% {
         opacity: 0;
@@ -240,6 +251,7 @@
     }
 }
 
+/* 텍스트 키프레임 3 */
 @keyframes slide_text3 {
     0% {
         opacity: 0;

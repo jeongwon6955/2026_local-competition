@@ -32,11 +32,26 @@ button {
     margin: 0 auto;
 }
 
+.c_box {
+    padding: 40px 80px;
+    margin-top: 50px;
+}
+
 /* 스크롤 제어 */
 body:has(#login:checked),
 /* 안내팝업용 스크롤 제어 */
 body:has(#infor_popup:checked) {
     overflow: hidden;
+}
+
+/* 제목 스타일 */
+.title {
+    font-weight: lighter;
+    font-size: 40px;
+    span {
+        color: var(--main-color);
+        font-weight: bold;
+    }
 }
 
 /* 헤더영역 */
@@ -214,7 +229,6 @@ header {
                     box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
                     transition: all 0.2s;
                     z-index: 99;
-                    transition-delay: 0.4s;
                     &:hover {
                         opacity: 1 !important;
                         visibility: visible !important;
@@ -232,13 +246,13 @@ header {
                 }
                 li {
                     align-content: center;
-                    transition: all 0.2s;
                     a {
                         padding-inline: 20px;
                         display: block;
                         height: 100%;
                         align-content: center;
                         position: relative;
+                        transition: all 0.2s;
                         i {
                             font-size: 10px;
                             position: absolute;
