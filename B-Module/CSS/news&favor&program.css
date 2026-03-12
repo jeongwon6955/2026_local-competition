@@ -84,24 +84,132 @@
     .p_box {
         width: 100%;
         display: flex;
+        justify-content: space-between;
         margin-top: 30px;
+        transition: all 0.2s;
         &:hover div{
             transform: scale(0.9);
         }
+            
         div {
-            width: calc(12.5% + 150px);
-            height: 445px;
-            margin-left: -150px;
             position: relative;
+            height: 220px;
+            box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border-radius: 10px;
+            transition: all 0.2s;
+            cursor: pointer;
             &:hover {
+                transform: scale(1.2);
                 z-index: 10;
-                transform: scale(1.1);
+            }
+            &:hover::before {
+                background-color: rgba(0,0,0,0.5);
+            }
+            &:hover p {
+                opacity: 1;
             }
             img {
                 height: 100%;
                 object-fit: cover;
-                border-radius: 20px;
+            }
+            p { 
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                font-weight: bold;
+                color: white;
+                z-index: 4;
+                text-align: center;
+                align-content: center;
+                padding: 20px;
+                opacity: 0;
+                transition: all 0.2s;
+            }
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                background-color: rgba(0,0,0,0);
+                transition: all 0.2;
             }
         }
+    }
+    .p_modalbox {
+        .p_modal {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 5;
+            visibility: hidden;
+            transition: all 0.2s;
+            z-index: 66;
+            div {
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                transition: all 0.2s;
+                opacity: 0;
+                img {
+                    height: 500px;
+                    display: block;
+                }
+                p {
+                    display: block;
+                    width: 100%;
+                    background-color: var(--gray-muted);
+                    padding: 20px;
+                    font-weight: bold;
+                    color: var(--main-color);
+                    border-top: 2px solid var(--sub-color);
+                    font-size: 18px;
+                }
+            }
+            .p_close_btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 30px;
+                opacity: 1;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+    #p_modalbtn1:checked ~ #p_modal1,
+    #p_modalbtn2:checked ~ #p_modal2,
+    #p_modalbtn3:checked ~ #p_modal3,
+    #p_modalbtn4:checked ~ #p_modal4,
+    #p_modalbtn5:checked ~ #p_modal5,
+    #p_modalbtn6:checked ~ #p_modal6,
+    #p_modalbtn7:checked ~ #p_modal7,
+    #p_modalbtn8:checked ~ #p_modal8 {
+        visibility: visible;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    #p_modalbtn1:checked ~ #p_modal1 > div,
+    #p_modalbtn2:checked ~ #p_modal2 > div,
+    #p_modalbtn3:checked ~ #p_modal3 > div,
+    #p_modalbtn4:checked ~ #p_modal4 > div,
+    #p_modalbtn5:checked ~ #p_modal5 > div,
+    #p_modalbtn6:checked ~ #p_modal6 > div,
+    #p_modalbtn7:checked ~ #p_modal7 > div,
+    #p_modalbtn8:checked ~ #p_modal8 > div {
+        opacity: 1;
     }
 }

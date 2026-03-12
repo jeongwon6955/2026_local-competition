@@ -43,6 +43,17 @@ body:has(#login:checked),
 body:has(#infor_popup:checked) {
     overflow: hidden;
 }
+/* 프로그램 스크롤 제어 */
+body:has(#p_modalbtn1:checked),
+body:has(#p_modalbtn2:checked),
+body:has(#p_modalbtn3:checked),
+body:has(#p_modalbtn4:checked),
+body:has(#p_modalbtn5:checked),
+body:has(#p_modalbtn6:checked),
+body:has(#p_modalbtn7:checked),
+body:has(#p_modalbtn8:checked) {
+    overflow: hidden;
+}
 
 /* 제목 스타일 */
 .title {
