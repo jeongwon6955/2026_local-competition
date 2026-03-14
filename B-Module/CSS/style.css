@@ -33,7 +33,7 @@ button {
 }
 
 .c_box {
-    padding: 40px 80px;
+    padding: 40px 200px;
     margin-top: 50px;
 }
 
@@ -338,6 +338,18 @@ footer {
                     margin-bottom: 10px;
                     font-size: 14px;
                     cursor: pointer;
+                }
+                .social_iconBox {
+                    margin-top: 40px;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
                 }
             }
             .f_content_bar {

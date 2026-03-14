@@ -1,0 +1,107 @@
+/* 추천도서 */
+#reco_books {
+    .r_btnslider{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .r_btnBox {
+            display: none;
+        }
+        button {
+            width: 80px;
+            height: 80px;
+            border-radius: 50px;
+            font-size: 50px;
+            position: absolute;
+            z-index: 2;
+            label {
+                display: block;
+                width: 100%;
+                height: 100%;
+                align-content: center;
+                cursor: pointer;
+            }
+        }
+        .prev {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .next {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .r_btnslides {
+            display: flex;
+            margin-top: 30px;
+            transition: transform 0.5s ease;
+            .r_btnslide {
+                flex: 0 0 calc(33.33% - 120px); 
+                margin: 0 60px;
+                transform: scale(0.7);
+                align-content: center;
+                transition: transform 0.5s ease;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+                .reco_imgTitle {
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    #recoSlide1 ~ .r_btnslider > .r_btnslides {
+        transform: translateX(33.3333%);
+    }
+    #recoSlide2:checked ~ .r_btnslider > .r_btnslides {
+        transform: translateX(0);
+    }
+    #recoSlide3:checked ~ .r_btnslider > .r_btnslides {
+        transform: translateX(-33.3333%);
+    }
+    #recoSlide4:checked ~ .r_btnslider > .r_btnslides {
+        transform: translateX(-66.6666%);
+    }
+    #recoSlide5:checked ~ .r_btnslider > .r_btnslides {
+        transform: translateX(-99.9999%);
+    }
+    #recoSlide6:checked ~ .r_btnslider > .r_btnslides {
+        transform: translateX(-133.3333%);
+    }
+    #recoSlide7:checked ~ .r_btnslider > .r_btnslides {
+        transform: translateX(-166.6666%);
+    }
+
+    #recoSlide1:checked ~ .r_btnslider .r1,
+    #recoSlide2:checked ~ .r_btnslider .r2,
+    #recoSlide3:checked ~ .r_btnslider .r3,
+    #recoSlide4:checked ~ .r_btnslider .r4,
+    #recoSlide5:checked ~ .r_btnslider .r5,
+    #recoSlide6:checked ~ .r_btnslider .r6,
+    #recoSlide7:checked ~ .r_btnslider .r7 {
+        transform: scale(1);
+    }
+    #recoSlide1:checked ~ .r_btnslider #r_btnBox1,
+    #recoSlide2:checked ~ .r_btnslider #r_btnBox2,
+    #recoSlide3:checked ~ .r_btnslider #r_btnBox3,
+    #recoSlide4:checked ~ .r_btnslider #r_btnBox4,
+    #recoSlide5:checked ~ .r_btnslider #r_btnBox5,
+    #recoSlide6:checked ~ .r_btnslider #r_btnBox6,
+    #recoSlide7:checked ~ .r_btnslider #r_btnBox7 {
+        display: block;
+    }
+    #recoSlide1:checked ~ .r_btnslider #r_btnBox2,
+    #recoSlide2:checked ~ .r_btnslider #r_btnBox1,
+    #recoSlide3:checked ~ .r_btnslider #r_btnBox2,
+    #recoSlide4:checked ~ .r_btnslider #r_btnBox3,
+    #recoSlide5:checked ~ .r_btnslider #r_btnBox4,
+    #recoSlide6:checked ~ .r_btnslider #r_btnBox5,
+    #recoSlide7:checked ~ .r_btnslider #r_btnBox6 {
+        display: none;
+    }
+}

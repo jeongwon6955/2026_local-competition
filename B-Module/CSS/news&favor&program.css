@@ -83,8 +83,9 @@
 #program {
     .p_box {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        align-content: flex-start;
+        column-gap: 20px;
+        column-count: 4;
         margin-top: 30px;
         transition: all 0.2s;
         &:hover div{
@@ -93,12 +94,13 @@
             
         div {
             position: relative;
-            height: 220px;
+            width: 100%;
             box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.2);
             overflow: hidden;
             border-radius: 10px;
             transition: all 0.2s;
             cursor: pointer;
+            margin-bottom: 20px;
             &:hover {
                 transform: scale(1.2);
                 z-index: 10;
@@ -110,8 +112,9 @@
                 opacity: 1;
             }
             img {
-                height: 100%;
+                width: 100%;
                 object-fit: cover;
+                display: block;
             }
             p { 
                 position: absolute;
@@ -170,7 +173,7 @@
                 p {
                     display: block;
                     width: 100%;
-                    background-color: var(--gray-muted);
+                    background-color: white;
                     padding: 20px;
                     font-weight: bold;
                     color: var(--main-color);

@@ -1,0 +1,66 @@
+/* 행사달력 */
+#schedule {
+    .s_btnbox {
+        margin: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        .cale_date {
+            display: flex;
+            h1 {
+                margin-right: 20px;
+            }
+            .cale_month {
+                color: var(--main-color);
+            }
+        }
+        select {
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            background-color: var(--main-color);
+            color: white;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+    }
+    .calendar {
+        .cale_dayweek {
+            display: flex;
+            padding-block: 10px;
+            border-top: 1px solid var(--gray-muted);
+            div {
+                width: 14.2857%;
+            }
+        }
+        .cale_row {
+            display: flex;
+            border-top: 1px solid var(--gray-muted);
+            div {
+                width: 14.2857%;
+                height: 190px;
+                padding: 10px;
+                border-right: 1px solid var(--gray-muted);
+                span {
+                    display: block;
+                    width: fit-content;
+                    font-size: 11px;
+                    background-color: var(--main-light);
+                    color: white;
+                    padding: 5px;
+                    margin-top: 5px;
+                    font-weight: bold;
+                }
+            }
+            .not_day {
+                color: var(--gray-muted);
+            }
+        }
+        .cale_weekendblue {
+            color: blue;
+            border-right: none !important;
+        }
+        .cale_weekendred {
+            color: red;
+        }
+    } 
+}
