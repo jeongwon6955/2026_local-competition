@@ -382,78 +382,68 @@
         <!-- 추천도서 영역 -->
         <section id="reco_books" class="c_box">
             <h1 class="title"><span>추천</span>도서</h1>
-            <input type="radio" id="recoSlide1" name="reco" checked hidden>
-            <input type="radio" id="recoSlide2" name="reco" hidden>
-            <input type="radio" id="recoSlide3" name="reco" hidden>
-            <input type="radio" id="recoSlide4" name="reco" hidden>
-            <input type="radio" id="recoSlide5" name="reco" hidden>
-            <input type="radio" id="recoSlide6" name="reco" hidden>
-            <input type="radio" id="recoSlide7" name="reco" hidden>
-            <div class="r_btnslider">
-                <div class="r_btnBox" id="r_btnBox1">
-                    <button type="button" class="prev"><label for="recoSlide7"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide2"><i class="fa-solid fa-angle-right"></i></label></button>
+            <!-- 왼쪽 | 이전 -->
+            <input type="radio" name="carousel" id="car_1" hidden>
+            <input type="radio" name="carousel" id="car_3" hidden checked>
+            <input type="radio" name="carousel" id="car_5" hidden>
+            <input type="radio" name="carousel" id="car_7" hidden>
+            <input type="radio" name="carousel" id="car_9" hidden>
+            <input type="radio" name="carousel" id="car_11" hidden>
+            <input type="radio" name="carousel" id="car_13" hidden>
+        
+            <!-- 오른쪽 | 다음 -->
+            <input type="radio" name="carousel" id="car_2" hidden>
+            <input type="radio" name="carousel" id="car_4" hidden>
+            <input type="radio" name="carousel" id="car_6" hidden>
+            <input type="radio" name="carousel" id="car_8" hidden>
+            <input type="radio" name="carousel" id="car_10" hidden>
+            <input type="radio" name="carousel" id="car_12" hidden>
+            <input type="radio" name="carousel" id="car_14" hidden>
+        
+            <!-- 컨트롤러 -->
+            <div class="controls">
+                <label for="car_1" class="car_1 left"><i class="fa-solid fa-angle-left"></i></label>
+                <label for="car_3" class="car_3 left"><i class="fa-solid fa-angle-left"></i></label>
+                <label for="car_5" class="car_5 left"><i class="fa-solid fa-angle-left"></i></label>
+                <label for="car_7" class="car_7 left"><i class="fa-solid fa-angle-left"></i></label>
+                <label for="car_9" class="car_9 left"><i class="fa-solid fa-angle-left"></i></label>
+                <label for="car_11" class="car_11 left"><i class="fa-solid fa-angle-left"></i></label>
+                <label for="car_13" class="car_13 left"><i class="fa-solid fa-angle-left"></i></label>
+        
+                <label for="car_2" class="car_2 right"><i class="fa-solid fa-angle-right"></i></label>
+                <label for="car_4" class="car_4 right"><i class="fa-solid fa-angle-right"></i></label>
+                <label for="car_6" class="car_6 right"><i class="fa-solid fa-angle-right"></i></label>
+                <label for="car_8" class="car_8 right"><i class="fa-solid fa-angle-right"></i></label>
+                <label for="car_10" class="car_10 right"><i class="fa-solid fa-angle-right"></i></label>
+                <label for="car_12" class="car_12 right"><i class="fa-solid fa-angle-right"></i></label>
+                <label for="car_14" class="car_14 right"><i class="fa-solid fa-angle-right"></i></label>
+            </div>
+        
+            <!-- 캐러셀 -->
+            <div class="carousel">
+                <div class="card_wrap card1">
+                    <section class="card" style="--bg: lightblue;">1</section>
+                    <section class="card" style="--bg: lightcoral;">2</section>
+                    <section class="card" style="--bg: lightgray;">3</section>
+                    <section class="card" style="--bg: lightgreen;">4</section>
+                    <section class="card" style="--bg: lightpink;">5</section>
+                    <section class="card" style="--bg: aliceblue;">6</section>
+                    <section class="card" style="--bg: navy; color: white;">7</section>
+        
+                    <!-- 보이는 슬라이드 개수에 비례하여 앞에서부터 추가 -->
+                    <section class="card" style="--bg: lightblue;">1</section>
                 </div>
-                <div class="r_btnBox" id="r_btnBox2">
-                    <button type="button" class="prev"><label for="recoSlide1"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide3"><i class="fa-solid fa-angle-right"></i></label></button>
-                </div>
-                <div class="r_btnBox" id="r_btnBox3">
-                    <button type="button" class="prev"><label for="recoSlide2"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide4"><i class="fa-solid fa-angle-right"></i></label></button>
-                </div>
-                <div class="r_btnBox" id="r_btnBox4">
-                    <button type="button" class="prev"><label for="recoSlide3"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide5"><i class="fa-solid fa-angle-right"></i></label></button>
-                </div>
-                <div class="r_btnBox" id="r_btnBox5">
-                    <button type="button" class="prev"><label for="recoSlide4"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide6"><i class="fa-solid fa-angle-right"></i></label></button>
-                </div>
-                <div class="r_btnBox" id="r_btnBox6">
-                    <button type="button" class="prev"><label for="recoSlide5"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide7"><i class="fa-solid fa-angle-right"></i></label></button>
-                </div>
-                <div class="r_btnBox" id="r_btnBox7">
-                    <button type="button" class="prev"><label for="recoSlide6"><i class="fa-solid fa-angle-left"></i></label></button>
-                    <button type="button" class="next"><label for="recoSlide1"><i class="fa-solid fa-angle-right"></i></label></button>
-                </div>
-                <div class="r_btnslides">
-                    <div class="r_btnslide r1">
-                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">나에게 나다움을 주기로 했다 : 나다움을 찾아가는 다섯 가지 마음 습관</p>
-                        <p>지은이 : 고정욱</p>
-                    </div>
-                    <div class="r_btnslide r2">
-                        <img src="../../RES/추천도서/추천도서2.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">여름이 반짝</p>
-                        <p>지은이 : 김수빈</p>
-                    </div>
-                    <div class="r_btnslide r3">
-                        <img src="../../RES/추천도서/추천도서3.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">사랑 한 꼬집을 넣으면</p>
-                        <p>지은이 : 배리 팀스</p>
-                    </div>
-                    <div class="r_btnslide r4">
-                        <img src="../../RES/추천도서/추천도서4.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">정말 정말 소리 지르고 싶어!</p>
-                        <p>지은이 : 사이먼 필립</p>
-                    </div>
-                    <div class="r_btnslide r5">
-                        <img src="../../RES/추천도서/추천도서5.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">힐빌리의 노래 : 위기의 가정과 문화에 대한 회고</p>
-                        <p>지은이 : J.D 밴스</p>
-                    </div>
-                    <div class="r_btnslide r6">
-                        <img src="../../RES/추천도서/추천도서6.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">(허영만의) 커피 한잔 할까요?</p>
-                        <p>지은이 : 허영만</p>
-                    </div>
-                    <div class="r_btnslide r7">
-                        <img src="../../RES/추천도서/추천도서7.jpg" alt="추천도서" title="추천도서">
-                        <p class="reco_imgTitle">두더지의 여름: 김상근 그림책</p>
-                        <p>지은이 : 김상근</p>
-                    </div>
+        
+                <div class="card_wrap card2">
+                    <section class="card" style="--bg: lightblue;">1</section>
+                    <section class="card" style="--bg: lightcoral;">2</section>
+                    <section class="card" style="--bg: lightgray;">3</section>
+                    <section class="card" style="--bg: lightgreen;">4</section>
+                    <section class="card" style="--bg: lightpink;">5</section>
+                    <section class="card" style="--bg: aliceblue;">6</section>
+                    <section class="card" style="--bg: navy; color: white;">7</section>
+        
+                    <section class="card" style="--bg: lightblue;">1</section>
                 </div>
             </div>
         </section>
