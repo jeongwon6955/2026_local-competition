@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../../RES/fontawesome/css/all.css">
+    <title>도서관현황</title>
+</head>
+<body>
+    <!-- 컨테이너 -->
+    <div class="container">
+        <!-- 헤더 영역 -->
+        <header>
+            <input type="checkbox" id="login" hidden> <!-- 로그인용 input -->
+            <!-- 로그인 레이어 팝업창 -->
+            <div class="popup">
+                <div class="popup_box">
+                    <!-- 닫기 버튼 -->
+                    <span class="close_btn"><label for="login"><i class="fa-solid fa-x"></i></label></span> <!-- 로그인용 lable -->
+                    <!-- 로고 -->
+                    <img src="../../RES/images/logo.png" alt="logo" title="logo">
+                    <div class="input_box">
+                        <!-- 이메일 -->
+                        <div class="popup_wrapper">
+                            <input type="text" id="email" required>
+                            <span class="popup_text">Email</span>
+                        </div>
+                        <!-- 비밀번호 -->
+                        <div class="popup_wrapper">
+                            <input type="password" id="password" required>
+                            <span class="popup_text">Password</span>
+                        </div>
+                    </div>
+                    <!-- 로그인 버튼 -->
+                    <button type="button">로그인</button>
+                </div>
+            </div>
+            <!-- user 로그인/회원가입 -->
+            <div class="user">
+                <div class="sign_in"><label for="login">로그인</label></div> <!-- 로그인용 lable -->
+                <div class="sign_up">회원가입</div>
+            </div>
+            <!-- 헤더에 로고 네비게이션 영역 -->
+            <div class="h_bottom">
+                <!-- logo 로고 -->
+                <div class="logo"><a href="index.html"><img src="../../RES/images/logo.png" alt="logo" title="logo"></a></div>
+                <!-- nav 네비게이션 -->
+                <nav class="nav">
+                    <ul class="menu">
+                        <li>
+                            <a href="#">도서관소개 <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">도서관소개</a></li>
+                                <li><a href="#">도서관현황</a></li>
+                            </ul>
+                        </li>
+                        <li class="m_bar">|</li>
+                        <li>
+                            <a href="#">도서자료실 <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">자료실</a></li>
+                                <li><a href="#">열람실예약</a></li>
+                            </ul>
+                        </li>
+                        <li class="m_bar">|</li>
+                        <li>
+                            <a href="#">회원서비스 <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">화원가입</a></li>
+                                <li><a href="#">마이페이지</a></li>
+                            </ul>
+                        </li>
+                        <li class="m_bar">|</li>
+                        <li><a href="#">도서검색</a></li>
+                        <li class="m_bar">|</li>
+                        <li><a href="#">도서관리자</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- 도서관 현황 -->
+        <section id="current_situation" class="c_box">
+            <object data="../../RES/C/southKoreaHigh.svg" type="image/svg+xml" width="600" height="1000"></object>
+        </section> 
+        <!-- 푸터 영역 -->
+        <footer>
+            <!-- 푸터 위 로고/내용 -->
+            <div class="f_top">
+                <!-- 푸터 왼쪽 로고 -->
+                <div class="f_left">
+                    <img src="../../RES/images/logo.png" alt="logo" title="logo">
+                </div>
+                <!-- 푸터 오른쪽 내용 -->
+                <div class="f_right">
+                    <ul>
+                        <li class="f_h">도서관소개</li>
+                        <li>도서관소개</li>
+                        <li>도서관현황</li>
+                    </ul>
+                    <ul>|</ul>
+                    <ul>
+                        <li class="f_h">도서관자료실</li>
+                        <li>자료실</li>
+                        <li>열람실예약</li>
+                    </ul>
+                    <ul>|</ul>
+                    <ul>
+                        <li class="f_h">회원서비스</li>
+                        <li>회원가입</li>
+                        <li>마이페이지</li>
+                    </ul>
+                    <ul>|</ul>
+                    <ul>
+                        <li class="f_h">도서검색</li>
+                    </ul>
+                    <ul>|</ul>
+                    <ul>
+                        <li class="f_h">도서관리자</li>
+                    </ul>
+                    <ul class="f_content_bar"></ul>
+                    <ul>
+                        <li class="f_h">Content</li>
+                        <li>문의전화안내 1644-8000 <br> 운영시간(평일) 09:00~18:00</li>
+                        <div class="social_iconBox">
+                            <img src="../../RES/social/social icon1.jpg" alt="social_icon" title="social_icon">
+                            <img src="../../RES/social/social icon2.jpg" alt="social_icon" title="social_icon">
+                            <img src="../../RES/social/social icon3.jpg" alt="social_icon" title="social_icon">
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- 푸터 아래 카피라이트/주소 -->
+            <div class="f_bottom">
+                <p>인천시 부평구 무네미로 448번길 77 한국산업인력공단 글로벌숙련기술진흥원</p>
+                <p>COPYRIGHTⓒ 2016 HRDKOREA</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
