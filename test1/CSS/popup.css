@@ -1,0 +1,66 @@
+#infor_popup:checked ~ .infor_popupBox {
+    animation: popup 0.3s ease-in-out forwards;
+}
+
+#infor_popup:not(:checked) ~ .infor_popupBox {
+    visibility: hidden;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.infor_popupBox {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: grid;
+    place-items: center;
+    z-index: 99;
+    opacity: 0;
+    .infor_popup {
+        position: relative;
+        width: 450px;
+        overflow: hidden;
+        border-radius: 15px;
+        background-color: #fff;
+        .infor_close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 40px; 
+            &:hover {
+                color: red;
+            }
+        }
+        img {
+            width: 450px;
+            height: 300px;
+            display: block;
+        }
+        .infor_content {
+            padding: 30px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 25px;
+            p {
+                font-weight: bold;
+                font-size: 20px;
+            }
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+}
