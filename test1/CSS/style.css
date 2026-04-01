@@ -45,7 +45,15 @@ button {
 }
 
 body:has(#infor_popup:checked),
-body:has(#login:checked) {
+body:has(#login:checked),
+body:has(#p_btn1:checked),
+body:has(#p_btn2:checked),
+body:has(#p_btn3:checked),
+body:has(#p_btn4:checked),
+body:has(#p_btn5:checked),
+body:has(#p_btn6:checked),
+body:has(#p_btn7:checked),
+body:has(#p_btn8:checked) {
     overflow: hidden;
 }
 

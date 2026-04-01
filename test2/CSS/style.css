@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia';
+}
+
+:root {
+    --main-color: #047000;
+    --main-light: #0d9208;
+    --sub-color: #0f2f53;
+    --gray-color: #c5c5c5;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.c_box {
+    padding: 40px 200px;
+    margin-top: 50px;
+}
+
+header {
+    width: 100%;
+    height: 130px;
+    padding-inline: 30px;
+    border-bottom: 1px solid var(--main-color);
+    .user {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 50px;
+        border-bottom: 1px solid var(--gray-color);
+        div {
+            border: 1px solid rgba(0,0,0,0.2);
+            padding-inline: 10px;
+            height: 40px;
+            align-content: center;
+            border-radius: 10px;
+            margin-left: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            label {
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                align-content: center;
+            }
+            &.sign_up {
+                background-color: black;
+                color: white;
+            }
+            &.sign_in:hover {
+                border-color: rgba(0,0,0,0.8);
+            }
+        }
+    }
+    .h_bottom {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            align-content: center;
+            img {
+                width: 130px;
+            }
+        }
+        nav {
+            .menu {
+                display: flex;
+                height: 80px;
+                color: var(--sub-color);
+                font-size: 18px;
+                li {
+                    position: relative;
+                    a {
+                        padding-inline: 20px;
+                        display: block;
+                        height: 100%;
+                        align-content: center;
+                        transition: all 0.2s;
+                        &:hover {
+                            transform: scale(1.1);
+                            font-weight: bold;
+                        }
+                        i {
+                            position: absolute;
+                            right: 5px;
+                            font-size: 12px;
+                            transition: all 0.2s;
+                        }
+                        .fa_minus {
+                            opacity: 0;
+                        }
+                        &:focus .fa-plus {
+                            transition-delay: 0.3;
+                            transform: rotate(90deg);
+                            opacity: 0;
+                        }
+                        &:focus .fa-minus {
+                            opacity: 1;
+                        }
+                        &:focus ~ .submenu {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                        &:not(:hover) ~ .submenu {
+                            visibility: hidden;
+                            opacity: 0;
+                        }
+                    }
+                    .submenu {
+                        position: absolute;
+                        background-color: #fff;
+                        top: 70px;
+                        width: 170px;
+                        display: block;
+                        padding: 20px;
+                        box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+                        z-index: 10;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.2s;
+                        &:hover {
+                            visibility: visible !important;
+                            opacity: 1 !important;
+                        }
+                        li {
+                            a {
+                                padding: 20px 10px;
+                                &:hover {
+                                    transform: scale(1);
+                                    background-color: rgba(4, 112, 0, 0.1);
+                                }
+                            }
+                        }
+                    }
+                }
+                .h_bar {
+                    align-content: center;
+                    padding-inline: 20px;
+                }
+            }
+        }
+    }
+}

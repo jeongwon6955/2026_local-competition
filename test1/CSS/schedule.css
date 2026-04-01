@@ -1,0 +1,63 @@
+#calendar {
+    .c_dateBox {
+        display: flex;
+        justify-content: space-between;
+        margin-block: 30px;
+        h1 {
+            span {
+                color: var(--main-color);
+                margin-left: 10px;
+            }
+        }
+        .c_btnBox {
+            select {
+                background-color: var(--main-color);
+                color: white;
+                padding: 10px 20px;
+                font-size: 20px;
+                margin-left: 20px;
+            }
+        }
+    }
+    .c_dayBox {
+        .c_blue {
+            color: rgb(39, 39, 214);
+        }
+        .c_red {
+            color: rgb(202, 39, 39);
+        }
+        .c_dayWeek {
+            display: flex;
+            border-top: 1px solid var(--gray-color);
+            padding-block: 10px;
+            div {
+                width: 14.2857%;
+            }
+        }
+        .c_dayColumn {
+            display: flex;
+            border-top: 1px solid var(--gray-color);
+            .not_day {
+                color: rgba(0,0,0,0.4);
+            }
+            .c_blue {
+                border-right: none;
+            }  
+            div {
+                width: 14.2857%;
+                height: 190px;
+                padding: 10px;
+                border-right: 1px solid var(--gray-color);
+                p {
+                    background-color: var(--main-light);
+                    color: white;
+                    font-size: 12px;
+                    padding: 5px;
+                    font-weight: bold;
+                    margin-top: 5px;
+                }
+            }
+        }
+        
+    }
+}
