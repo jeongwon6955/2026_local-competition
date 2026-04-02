@@ -1,0 +1,57 @@
+#schedule {
+    .s_date {
+        display: flex;
+        justify-content: space-between;
+        margin-block: 30px;
+        span {
+            color: var(--main-color);
+            margin-left: 10px;
+        }
+        select {
+            padding: 10px 20px;
+            background-color: var(--main-color);
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+    .calendar {
+        .c_red {
+            color: rgb(211, 40, 40);
+        }
+        .c_blue {
+            color: rgb(49, 49, 199);  
+            border-right: none;
+        }
+        .not_day {
+            color: rgba(0,0,0,0.3);
+        }
+        .c_week {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding-block: 10px;
+            border-top: 1px solid var(--gray-color);
+        }
+        .c_day {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            .c_blue {
+                border-right: none;
+            }
+            div {
+                height: 190px;
+                border-top: 1px solid var(--gray-color);
+                border-right: 1px solid var(--gray-color);
+                padding: 10px;
+                p {
+                    padding: 5px;
+                    color: white;
+                    background-color: var(--main-color);
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
