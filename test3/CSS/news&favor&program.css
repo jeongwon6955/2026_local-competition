@@ -4,38 +4,31 @@
         justify-content: space-between;
         margin-top: 30px;
         h2 {
-            display: none;
             color: var(--main-light);
             font-size: 30px;
-        }
-        .n_btns {
-            display: flex;
+            display: none;
         }
         label {
-            display: block;
-            padding: 15px 10px;
-            border-radius: 20px;
+            padding: 15px;
             background-color: var(--main-color);
+            border-radius: 10px;
             color: white;
-            font-size: 14px;
-            margin-left: 20px;
-            transition: all 0.2s;
+            font-size: 15px;
+            margin-left: 10px;
             &:hover {
                 font-weight: bold;
-                transform: scale(1.1);
             }
         }
     }
-    .n_content {
+    .n_text {
+        margin-top: 40px;
         display: none;
-        margin-top: 30px;
         li {
             display: flex;
             justify-content: space-between;
-            padding-block: 25px;
+            padding-block: 20px;
             border-bottom: 1px solid var(--gray-color);
-            transition: all 0.2s;
-            cursor: pointer;
+            color: var(--sub-color);
             &:hover {
                 font-weight: bold;
             }
@@ -43,68 +36,56 @@
     }
 }
 
-#n_list1:checked ~ .n_content1,
-#n_list2:checked ~ .n_content2,
-#n_list3:checked ~ .n_content3,
-#n_list1:checked ~ .n_notice > .n_texts > h2:nth-child(1),
-#n_list2:checked ~ .n_notice > .n_texts > h2:nth-child(2),
-#n_list3:checked ~ .n_notice > .n_texts > h2:nth-child(3) {
+#n1:checked ~ .n_notice > div > .n_title1,
+#n2:checked ~ .n_notice > div > .n_title2,
+#n3:checked ~ .n_notice > div > .n_title3,
+#n1:checked ~ .n_text1,
+#n2:checked ~ .n_text2,
+#n3:checked ~ .n_text3 {
     display: block;
 }
 
 #favor {
-    background-color: rgb(155, 224, 153);
-    margin: 0;
+    background-color: rgba(22, 112, 4,0.2);
     span {
         color: white;
     }
     .fa_box {
+        margin-top: 30px;
         display: flex;
         justify-content: space-between;
-        margin-top: 30px;
-        img {
-            width: 100px;
-        }
         div {
             display: flex;
-            justify-content: space-between;
             flex-direction: column;
-            p {
-                font-size: 20px;
-                color: var(--main-color);
-                font-weight: bold;
-                padding: 10px;
-                box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.1);
-                border-radius: 10px;
-                text-align: center;
-                margin-top: 30px;
-                background-color: #fff;
-            }  
+            justify-content: space-between;
+        }
+        p {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+            color: var(--main-color);
+            font-weight: bold;
+            text-align: center;
         }
     }
 }
 
 #program {
-    .p_boxs {
+    .p_box {
         margin-top: 30px;
-        align-items: flex-start;
+        align-content: flex-start;
         column-gap: 20px;
         column-count: 4;
-        &:hover label {
-            transform: scale(0.9);
-        }
         label {
             position: relative;
             display: block;
-            margin-bottom: 20px;
             border-radius: 20px;
             overflow: hidden;
-            transition: all 0.4s;
-            box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
-            &:hover {
-                transform: scale(1.1);
-            }
-            &:hover p {
+            box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            &:hover p{
                 opacity: 1;
             }
             img {
@@ -117,29 +98,30 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0,0,0,0.6);
+                background-color: rgba(0,0,0,0.8);
                 color: white;
-                font-weight: bold;
-                font-size: 20px;
-                padding: 30px;
                 display: grid;
                 place-items: center;
                 text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 20px;
+                z-index: 10;
                 opacity: 0;
                 transition: all 0.4s;
             }
         }
     }
     .p_modal {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.8);
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
         display: grid;
         place-items: center;
-        z-index: 99;
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s;
@@ -148,13 +130,13 @@
             width: 300px;
             border-radius: 20px;
             overflow: hidden;
+            background-color: #fff;
             img {
                 width: 100%;
                 display: block;
             }
             p {
                 padding: 20px;
-                background-color: white;
                 color: var(--main-color);
                 font-weight: bold;
             }
@@ -162,23 +144,25 @@
                 position: absolute;
                 right: 20px;
                 top: 20px;
-                font-size: 30px;
+                color: black;
+                font-size: 25px;
                 &:hover {
                     color: red;
                 }
+
             }
         }
     }
 }
 
-#p_modalBtn1:checked ~ .p_modal1,
-#p_modalBtn2:checked ~ .p_modal2,
-#p_modalBtn3:checked ~ .p_modal3,
-#p_modalBtn4:checked ~ .p_modal4,
-#p_modalBtn5:checked ~ .p_modal5,
-#p_modalBtn6:checked ~ .p_modal6,
-#p_modalBtn7:checked ~ .p_modal7,
-#p_modalBtn8:checked ~ .p_modal8 {
+#p_btn1:checked ~ .p_modal1,
+#p_btn2:checked ~ .p_modal2,
+#p_btn3:checked ~ .p_modal3,
+#p_btn4:checked ~ .p_modal4,
+#p_btn5:checked ~ .p_modal5,
+#p_btn6:checked ~ .p_modal6,
+#p_btn7:checked ~ .p_modal7, 
+#p_btn8:checked ~ .p_modal8 {
     opacity: 1;
     visibility: visible;
 }

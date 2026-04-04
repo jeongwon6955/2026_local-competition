@@ -1,0 +1,56 @@
+#schedule {
+    .s_btnBox {
+        display: flex;
+        justify-content: space-between;
+        margin-block: 30px;
+        span {
+            margin-left: 10px;
+            color: var(--main-color);
+        }
+        select {
+            padding: 10px;
+            background-color: var(--main-color);
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+    .calendar {
+        .c_red {
+            color: rgb(201, 52, 52);
+        }
+        .c_blue {
+            color: rgb(42, 42, 207);
+        }
+        .not_day {
+            color: rgba(0,0,0,0.2);
+        }
+        .c_week {
+            padding-block: 10px;
+            border-top: 1px solid var(--gray-color);
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+        }
+        .c_day {
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            .c_blue {
+                border-right: none;
+            }
+            div {
+                height: 190px;
+                padding: 10px;
+                border-top: 1px solid var(--gray-color);
+                border-right: 1px solid var(--gray-color);
+                p {
+                    width: 100%;
+                    padding: 5px;
+                    background-color: var(--main-color);
+                    color: white;
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

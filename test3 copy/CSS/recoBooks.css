@@ -1,0 +1,135 @@
+#reco_books {
+    position: relative;
+}
+
+.controls {
+    label {
+        position: absolute;
+        top: 50%;
+        &.left{left: 8%;}
+        &.right{right: 8%;}
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        background-color: var(--gray-color);
+        display: grid;
+        place-items: center;
+        font-size: 30px;
+        visibility: hidden;
+        z-index: 11;
+    }
+}
+
+.carousel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-block: 1px solid var(--gray-color);
+    margin-top: 30px;
+    .card_wrap {
+        position: absolute;
+        display: flex;
+        width: 800%;
+        transition: all 0.4s;
+        &.card2 {
+            left: -700%;
+            visibility: hidden;
+        }
+        .card {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 50px 60px;
+            background-color: #fff;
+            .reco_num {
+                position: absolute;
+                top: 50px;
+                left: 60px;
+                color: var(--main-color);
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .reco_content {
+                p {
+                    margin-top: 5px;
+                    font-weight: lighter;
+                }
+            }
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+#car_1:checked ~ .controls > .car_13,
+#car_1:checked ~ .controls > .car_14,
+#car_3:checked ~ .controls > .car_1,
+#car_3:checked ~ .controls > .car_2,
+#car_5:checked ~ .controls > .car_3,
+#car_5:checked ~ .controls > .car_4,
+#car_7:checked ~ .controls > .car_5,
+#car_7:checked ~ .controls > .car_6,
+#car_9:checked ~ .controls > .car_7,
+#car_9:checked ~ .controls > .car_8,
+#car_11:checked ~ .controls > .car_9,
+#car_11:checked ~ .controls > .car_10,
+#car_13:checked ~ .controls > .car_11,
+#car_13:checked ~ .controls > .car_12,
+
+#car_2:checked ~ .controls > .car_3,
+#car_2:checked ~ .controls > .car_4,
+#car_4:checked ~ .controls > .car_5,
+#car_4:checked ~ .controls > .car_6,
+#car_6:checked ~ .controls > .car_7,
+#car_6:checked ~ .controls > .car_8,
+#car_8:checked ~ .controls > .car_9,
+#car_8:checked ~ .controls > .car_10,
+#car_10:checked ~ .controls > .car_11,
+#car_10:checked ~ .controls > .car_12,
+#car_12:checked ~ .controls > .car_13,
+#car_12:checked ~ .controls > .car_14,
+#car_14:checked ~ .controls > .car_1,
+#car_14:checked ~ .controls > .car_2 {
+    visibility: visible;
+    transition-delay: 0.4s;
+}
+
+#car_2:checked ~ .carousel > .card1 {left: calc(-100% * 1);}
+#car_4:checked ~ .carousel > .card1 {left: calc(-100% * 2);}
+#car_6:checked ~ .carousel > .card1 {left: calc(-100% * 3);}
+#car_8:checked ~ .carousel > .card1 {left: calc(-100% * 4);}
+#car_10:checked ~ .carousel > .card1 {left: calc(-100% * 5);}
+#car_12:checked ~ .carousel > .card1 {left: calc(-100% * 6);}
+#car_12:checked ~ .carousel > .card2 {left: calc(-100% * 6);}
+#car_14:checked ~ .carousel > .card1 {left: calc(-100% * 0);}
+#car_14:checked ~ .carousel > .card2 {left: calc(-100% * 7);}
+
+#car_1:checked ~ .carousel > .card1 {left: calc(-100% * 6);}
+#car_1:checked ~ .carousel > .card2 {left: calc(-100% * 6);}
+#car_3:checked ~ .carousel > .card1 {left: calc(-100% * 0);}
+#car_5:checked ~ .carousel > .card1 {left: calc(-100% * 1);}
+#car_7:checked ~ .carousel > .card1 {left: calc(-100% * 2);}
+#car_9:checked ~ .carousel > .card1 {left: calc(-100% * 3);}
+#car_11:checked ~ .carousel > .card1 {left: calc(-100% * 4);}
+#car_13:checked ~ .carousel > .card1 {left: calc(-100% * 5);}
+
+
+#car_14:checked ~ .carousel > .card2,
+#car_2:checked ~ .carousel > .card1,
+#car_1:checked ~ .carousel > .card2,
+#car_13:checked ~ .carousel > .card1 {
+    visibility: visible;
+    z-index: 1;
+}
+
+#car_14:checked ~ .carousel > .card1,
+#car_2:checked ~ .carousel > .card2,
+#car_1:checked ~ .carousel > .card1,
+#car_13:checked ~ .carousel > .card2 {
+    visibility: hidden;
+    transition: .05s;
+}

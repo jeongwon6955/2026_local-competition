@@ -1,0 +1,80 @@
+#intro {
+    .intro_box {
+        margin-bottom: 40px;
+        img {
+            width: 100%;
+            margin-top: 30px;
+        }
+        h2 {
+            margin-block: 10px;
+            color: var(--main-color);
+            font-size: 30px;
+        }
+        p {
+            color: var(--sub-color);
+            
+        }
+    }
+    .intro_history {
+        margin-top: 30px;
+        .histroy {
+            height: 400px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 20px;
+            &:hover .i_content > h1, 
+            &:hover .i_content > p {
+                color: white;
+            }
+            &:hover::before {
+                width: 500px;
+            }
+            img {
+                width: 500px;
+                border-radius: 20px;
+                object-fit: cover;
+                display: block;
+            }
+            .i_content {
+                align-content: center;
+                color: var(--sub-color);
+                padding-inline: 10px;
+                h1 {
+                    font-size: 100px;
+                    color: var(--main-color);
+                    text-align: right;
+                    transition: all 0.2s;
+                }
+                p {
+                    margin-top: 10px;
+                    transition: all 0.2s;
+                }
+            }
+            &.i_right {
+                h1 {
+                    text-align: left;
+                }
+                &::before {
+                    left: 0;
+                    border-radius: 0;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 100%;
+                right: 0;
+                top: 0;
+                background-color: var(--main-color);
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                z-index: -1;
+                transition: all 0.2s;
+            }
+        }
+    }   
+}

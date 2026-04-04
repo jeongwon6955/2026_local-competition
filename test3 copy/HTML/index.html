@@ -4,96 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../RES/fontawesome/css/all.css">
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="../CSS/popup.css">
-    <link rel="stylesheet" href="../CSS/visual.css">
     <link rel="stylesheet" href="../CSS/news&favor&program.css">
-    <link rel="stylesheet" href="../CSS/schedule.css">
+    <link rel="stylesheet" href="../CSS/popup.css">
     <link rel="stylesheet" href="../CSS/recoBooks.css">
+    <link rel="stylesheet" href="../CSS/schedule.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/visual.css">
     <title>스킬스북도서관</title>
 </head>
 <body>
-    <input type="checkbox" id="infor_popup" hidden checked>
+    <input type="checkbox" id="popup" hidden checked>
     <div class="infor_popupBox">
         <div class="infor_popup">
-            <label for="infor_popup"><i class="fa-solid fa-x"></i></label>
+            <label for="popup"><i class="fa-solid fa-x"></i></label>
             <img src="../../RES/images/images (95).jpg" alt="대회사진" title="대회사진">
             <div class="infor_content">
-                <p>2025년 지방기능경기대회 참가원서 접수 <br> 공고사항을 아래 같이 알려드립니다.</p>
+                <p>2025년 지방기능경기대회 참가원서 접수 공고사항을 아래 같이 알려드립니다.</p>
                 <div>
                     <li>접수기간 : 2025. 1. 13.(월) ～ 1. 24.(금) 18:00 마감 [12일간]</li>
                     <li>대상직종 : 웹디자인및개발 등 48개 직종</li>
                     <li>접수방법 : 마이스터넷 홈페이지 인터넷 접수</li>
                 </div>
-            </div>    
+            </div>
         </div>
     </div>
-    <section class="container">
+    <div class="container">
         <header>
             <input type="checkbox" id="login" hidden>
             <div class="user">
                 <div class="sign_in"><label for="login">로그인</label></div>
                 <div class="sign_up">회원가입</div>
             </div>
-            <div class="login_container">
+            <div class="login_modal">
                 <div class="login_box">
                     <label for="login"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/images/logo.png" alt="logo" title="logo">
+                    <img src="../../RES/images/logo2.png" alt="logo" title="logo">
                     <div class="input_box">
-                        <div class="input_wapper">
+                        <div class="input_warpper">
                             <input type="text" id="email" required>
                             <span>Email</span>
                         </div>
-                        <div class="input_wapper">
+                        <div class="input_warpper">
                             <input type="password" id="password" required>
                             <span>Password</span>
                         </div>
                     </div>
-                    <button type="button" class="login_btn">로그인</button>
+                    <button type="button">로그인</button>
                 </div>
             </div>
             <div class="h_bottom">
-                <div class="logo"><a href="index.html"><img src="../../RES/images/logo.png" alt="logo" title="logo"></a></div>
+                <div class="logo"><a href="index.html"><img src="../../RES/images/logo2.png" alt="logo" title="logo"></a></div>
                 <nav>
                     <ul class="menu">
                         <li>
-                            <a href="#">도서관소개 <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></a>
+                            <a href="#">도서관소개 <i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></a>
                             <ul class="submenu">
                                 <li><a href="#">도서관소개</a></li>
                                 <li><a href="#">도서관현황</a></li>
                             </ul>
                         </li>
-                        <li class="h_bar">|</li>
+                        <li class="h_h">|</li>
                         <li>
-                            <a href="#">도서자료실 <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></a>
+                            <a href="#">도서자료실 <i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></a>
                             <ul class="submenu">
                                 <li><a href="#">자료실</a></li>
                                 <li><a href="#">열람실예약</a></li>
                             </ul>
                         </li>
-                        <li class="h_bar">|</li>
+                        <li class="h_h">|</li>
                         <li>
-                            <a href="#">회원서비스 <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></a>
+                            <a href="#">회원서비스 <i class="fa-solid fa-plus"></i><i class="fa-solid fa-minus"></i></a>
                             <ul class="submenu">
                                 <li><a href="#">회원가입</a></li>
                                 <li><a href="#">마이페이지</a></li>
                             </ul>
                         </li>
-                        <li class="h_bar">|</li>
+                        <li class="h_h">|</li>
                         <li><a href="#">도서검색</a></li>
-                        <li class="h_bar">|</li>
+                        <li class="h_h">|</li>
                         <li><a href="#">도서관리자</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <section id="visual">
+        <section class="visual">
             <div class="slider">
-                <div class="stop_btnBox"><div class="stop_btn"><i class="fa-solid fa-play"></i> <i class="fa-solid fa-grip-lines-vertical"></i></div></div>
-                <div class="slides">
-                    <div class="slide"><img src="../../RES/images/images (43).jpg" alt="도서관" title="도서관"></div>
-                    <div class="slide"><img src="../../RES/images/images (51).jpg" alt="도서관" title="도서관"></div>
-                    <div class="slide"><img src="../../RES/images/images (53).jpg" alt="도서관" title="도서관"></div>
+                <div class="stop_btnBox"><div class="stop_btn"><i class="fa-solid fa-play"></i><i class="fa-solid fa-grip-lines-vertical"></i></div></div>
+                <div class="slides"> 
+                    <div><img src="../../RES/images/images (43).jpg" alt="도서관" title="도서관"></div>
+                    <div><img src="../../RES/images/images (51).jpg" alt="도서관" title="도서관"></div>
+                    <div><img src="../../RES/images/images (53).jpg" alt="도서관" title="도서관"></div>
                 </div>
                 <div class="v_bars">
                     <div></div>
@@ -101,55 +101,30 @@
                     <div></div>
                 </div>
                 <div class="v_texts">
-                    <p class="v_text1"><span>당신의 기술의 깊이,</span> <br>숙련된 가치를 페이지로 잇다</p>
-                    <p class="v_text2"><span>기술인의 어제와 내일이 만나는 곳,</span> <br>스킬스북에서 열리다</p>
-                    <p class="v_text3"><span>장인의 손끝에서 시민의 일상까지,</span> <br>모두를 위한 기술 도서관</p>
+                    <h2 class="v_text1"><span>당신의 기술의 깊이,</span> <br>숙련된 가치를 페이지로 잇다</h2>
+                    <h2 class="v_text2"><span>기술인의 어제와 내일이 만나는곳,</span><br> 스킬스북에서 열리다</h2>
+                    <h2 class="v_text3"><span>장인의 손끝에서 시민의 일상까지,</span><br> 모두를 위한 기술 도서관</h2>
                 </div>
             </div>
         </section>
-        <section id="favor" class="c_box">
-            <h1 class="title"><span>자주찾는</span> 메뉴</h1>
-            <div class="fa_box">
-                <div>
-                    <img src="../../RES/images/icon1-1.png" alt="도서대출" title="도서대출">
-                    <p>도서대출</p>
-                </div>
-                <div>
-                    <img src="../../RES/images/icon1-2.png" alt="도서반납" title="도서반납">
-                    <p>도서반납</p>
-                </div>
-                <div>
-                    <img src="../../RES/images/icon1-3.png" alt="희망도서신청" title="희망도서신청">
-                    <p>희망도서신청</p>
-                </div>
-                <div>
-                    <img src="../../RES/images/icon1-4.png" alt="AI추천도서" title="AI추천도서">
-                    <p>AI추천도서</p>
-                </div>
-                <div> 
-                    <p>좌석예약</p>
-                    <p>전자도서관</p>
-                </div>
-            </div>
-        </section>
-        <section id="news" class="c_box">
+        <section class="c_box" id="news">
             <h1 class="title"><span>도서관</span> 소식</h1>
-            <input type="radio" name="news" id="n_list1" hidden checked>
-            <input type="radio" name="news" id="n_list2" hidden>
-            <input type="radio" name="news" id="n_list3" hidden>
+            <input type="radio" name="news" id="n1" hidden checked>
+            <input type="radio" name="news" id="n2" hidden>
+            <input type="radio" name="news" id="n3" hidden>
             <div class="n_notice">
-                <div class="n_texts">
+                <div>
                     <h2>일반공지</h2>
-                    <h2>행사공지</h2>
+                    <h2>행사안내</h2>
                     <h2>채용공지</h2>
                 </div>
-                <div class="n_btns">
-                    <label for="n_list1">일반공지</label>
-                    <label for="n_list2">행사공지</label>
-                    <label for="n_list3">채용공지</label>
+                <div>
+                    <label for="n1">일반공지</label>
+                    <label for="n2">행사안내</label>
+                    <label for="n3">채용공지</label>
                 </div>
             </div>
-            <div class="n_content1 n_content">
+            <div class="n_text1 n_text">
                 <li><span>더운 여름 힘내요 – 연구정보실 개실 6주년 기념이벤트 당첨자 발표</span> <span>2024-08-08</span></li>
                 <li><span>더운 여름 힘내요 – 연구정보실 개실 6주년 기념이벤트</span> <span>2024-07-24</span></li>
                 <li><span>연구자를 위한 텍스트 마이닝(심화) 교육생 모집 안내</span> <span>2024-07-17</span></li>
@@ -157,7 +132,7 @@
                 <li><span>디지털인문학과 네트워크 분석 교육생 모집 안내</span> <span>2024-05-14</span></li>
                 <li><span>스킬스북도서관 -「청년 디지털 봉사단 ‘잇(IT)다’5기」- 최종 합격자 발표</span> <span>2024-05-10</span></li>
             </div>
-            <div class="n_content2 n_content">
+            <div class="n_text2 n_text">
                 <li><span>2024년 제9회 「월간 인문학을 만나다」 강연 안내</span> <span>2024-08-08</span></li>
                 <li><span>「스킬스북도서관이 간식박스 쏩니다!」7월 당첨 발표</span> <span>2024-08-07</span></li>
                 <li><span>별 헤는 「실감체험관」이벤트</span> <span>2024-07-25</span></li>
@@ -165,7 +140,7 @@
                 <li><span>스킬스북도서관이 간식박스 쏩니다!</span> <span>2024-07-02</span></li>
                 <li><span>2024년 제7회 「월간 인문학을 만나다」 강연 안내</span> <span>2024-07-01</span></li>
             </div>
-            <div class="n_content3 n_content">
+            <div class="n_text3 n_text">
                 <li><span>2024년 사서직 공무원 경력경쟁채용 필기시험 정답가안 공개 및 이의제기 안내</span> <span>2024-08-03</span></li>
                 <li><span>스킬스북도서관 공무직 근로자(미화) 채용 서류전형 합격자 및 면접전형 공고</span> <span>2024-08-02</span></li>
                 <li><span>2024년도 사서직 공무원 경력경쟁채용 필기시험 일정 ‧ 장소 및 응시자 준수사항 공고</span> <span>2024-07-26</span></li>
@@ -175,98 +150,123 @@
                 <li><span>스킬스북도서관 국가서지과 공무직 근로자 채용 서류전형(1차) 합격자 발표 및 면접시험(2차) 계획 공고</span> <span>2024-07-05</span></li>
             </div>
         </section>
-        <section id="program" class="c_box">
-            <h1 class="title"><span>프로그램</span></h1>
-            <input type="checkbox" id="p_modalBtn1" hidden>
-            <input type="checkbox" id="p_modalBtn2" hidden>
-            <input type="checkbox" id="p_modalBtn3" hidden>
-            <input type="checkbox" id="p_modalBtn4" hidden>
-            <input type="checkbox" id="p_modalBtn5" hidden>
-            <input type="checkbox" id="p_modalBtn6" hidden>
-            <input type="checkbox" id="p_modalBtn7" hidden>
-            <input type="checkbox" id="p_modalBtn8" hidden>
-            <div class="p_boxs">
-                <label for="p_modalBtn1"><img src="../../RES/프로그램/1.jpg" alt="프로그램1" title="프로그램1"> <p>피아니스트 김미정과 함께하는 힐링 클래식</p></label>
-                <label for="p_modalBtn2"><img src="../../RES/프로그램/2.png" alt="프로그램2" title="프로그램2"> <p>도란도란] 나를 찾아가는 마음챙김 그림책테라피</p></label>
-                <label for="p_modalBtn3"><img src="../../RES/프로그램/3.jpg" alt="프로그램3" title="프로그램3"> <p>신흥어울마당작은]2024년 하반기 프로그램 ' 뚝딱 한국사'</p></label>
-                <label for="p_modalBtn4"><img src="../../RES/프로그램/4.png" alt="프로그램4" title="프로그램4"> <p>[수주](성인)마을미디어 교육생 모집</p></label>
-                <label for="p_modalBtn5"><img src="../../RES/프로그램/5.jpg" alt="프로그램5" title="프로그램5"> <p>나를 치유하는 명화</p></label>
-                <label for="p_modalBtn6"><img src="../../RES/프로그램/6.jpg" alt="프로그램6" title="프로그램6"> <p>[문화가 있는 날] 푸른 하늘이 좋아요!</p></label>
-                <label for="p_modalBtn7"><img src="../../RES/프로그램/7.jpg" alt="프로그램7" title="프로그램7"> <p>책 속에서 사람을 만나다 </p></label>
-                <label for="p_modalBtn8"><img src="../../RES/프로그램/8.jpg" alt="프로그램8" title="프로그램8"> <p>서울 문화의 밤(8월) 행사 - 국지승 그림책 작가와 방구석 북토크</p></label>
-            </div>
-            <div class="p_modal1 p_modal">
+        <section class="c_box" id="favor">
+            <h1 class="title"><span>자주찾는</span> 메뉴</h1>
+            <div class="fa_box">
                 <div>
-                    <label for="p_modalBtn1"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/1.jpg" alt="프로그램1" title="프로그램1">
+                    <img src="../../RES/images/icon2-1.png" alt="도서대출" title="도서대출">
+                    <p>도서대출</p>
+                </div>
+                <div>
+                    <img src="../../RES/images/icon2-2.png" alt="도서반납" title="도서반납">
+                    <p>도서반납</p>
+                </div>
+                <div>
+                    <img src="../../RES/images/icon2-3.png" alt="희망도서신청" title="희망도서신청">
+                    <p>희망도서신청</p>
+                </div>
+                <div>
+                    <img src="../../RES/images/icon2-4.png" alt="AI추천도서" title="AI추천도서">
+                    <p>AI추천도서</p>
+                </div>
+                <div>
+                    <p>좌석예약</p>
+                    <p>전자도서관</p>
+                </div>
+            </div>
+        </section>
+        <section class="c_box" id="program">
+            <h1 class="title"><span>프로그램</span></h1>
+            <input type="checkbox" id="p_btn1" hidden>
+            <input type="checkbox" id="p_btn2" hidden>
+            <input type="checkbox" id="p_btn3" hidden>
+            <input type="checkbox" id="p_btn4" hidden>
+            <input type="checkbox" id="p_btn5" hidden>
+            <input type="checkbox" id="p_btn6" hidden>
+            <input type="checkbox" id="p_btn7" hidden>
+            <input type="checkbox" id="p_btn8" hidden>
+            <div class="p_box">
+                <label for="p_btn1"><img src="../../RES/프로그램/1.jpg" alt="프로그램" title="프로그램"> <p>피아니스트 김미정과 함께하는 힐링 클래식</p></label>
+                <label for="p_btn2"><img src="../../RES/프로그램/2.png" alt="프로그램" title="프로그램"> <p>도란도란] 나를 찾아가는 마음챙김 그림책테라피</p></label>
+                <label for="p_btn3"><img src="../../RES/프로그램/3.jpg" alt="프로그램" title="프로그램"> <p>신흥어울마당작은]2024년 하반기 프로그램 ' 뚝딱 한국사'</p></label>
+                <label for="p_btn4"><img src="../../RES/프로그램/4.png" alt="프로그램" title="프로그램"> <p>[수주](성인)마을미디어 교육생 모집</p></label>
+                <label for="p_btn5"><img src="../../RES/프로그램/5.jpg" alt="프로그램" title="프로그램"> <p>나를 치유하는 명화</p></label>
+                <label for="p_btn6"><img src="../../RES/프로그램/6.jpg" alt="프로그램" title="프로그램"> <p>[문화가 있는 날] 푸른 하늘이 좋아요!</p></label>
+                <label for="p_btn7"><img src="../../RES/프로그램/7.jpg" alt="프로그램" title="프로그램"> <p>책 속에서 사람을 만나다</p></label>
+                <label for="p_btn8"><img src="../../RES/프로그램/8.jpg" alt="프로그램" title="프로그램"> <p>서울 문화의 밤(8월) 행사 - 국지승 그림책 작가와 방구석 북토크</p></label>
+            </div>
+            <div class="p_modal p_modal1">
+                <div>
+                    <label for="p_btn1"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/1.jpg" alt="프로그램" title="프로그램">
                     <p>피아니스트 김미정과 함께하는 힐링 클래식</p>
                 </div>
             </div>
-            <div class="p_modal2 p_modal">
+            <div class="p_modal p_modal2">
                 <div>
-                    <label for="p_modalBtn2"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/2.png" alt="프로그램2" title="프로그램2">
+                    <label for="p_btn2"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/2.png" alt="프로그램" title="프로그램">
                     <p>도란도란] 나를 찾아가는 마음챙김 그림책테라피</p>
                 </div>
             </div>
-            <div class="p_modal3 p_modal">
+            <div class="p_modal p_modal3">
                 <div>
-                    <label for="p_modalBtn3"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/3.jpg" alt="프로그램3" title="프로그램3">
+                    <label for="p_btn3"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/3.jpg" alt="프로그램" title="프로그램">
                     <p>신흥어울마당작은]2024년 하반기 프로그램 ' 뚝딱 한국사'</p>
                 </div>
             </div>
-            <div class="p_modal4 p_modal">
+            <div class="p_modal p_modal4">
                 <div>
-                    <label for="p_modalBtn4"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/4.png" alt="프로그램4" title="프로그램4">
+                    <label for="p_btn4"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/4.png" alt="프로그램" title="프로그램">
                     <p>[수주](성인)마을미디어 교육생 모집</p>
                 </div>
             </div>
-            <div class="p_modal5 p_modal">
+            <div class="p_modal p_modal5">
                 <div>
-                    <label for="p_modalBtn5"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/5.jpg" alt="프로그램5" title="프로그램5">
+                    <label for="p_btn5"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/5.jpg" alt="프로그램" title="프로그램">
                     <p>나를 치유하는 명화</p>
                 </div>
             </div>
-            <div class="p_modal6 p_modal">
+            <div class="p_modal p_modal6">
                 <div>
-                    <label for="p_modalBtn6"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/6.jpg" alt="프로그램6" title="프로그램6">
+                    <label for="p_btn6"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/6.jpg" alt="프로그램" title="프로그램">
                     <p>[문화가 있는 날] 푸른 하늘이 좋아요!</p>
                 </div>
             </div>
-            <div class="p_modal7 p_modal">
+            <div class="p_modal p_modal7">
                 <div>
-                    <label for="p_modalBtn7"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/7.jpg" alt="프로그램7" title="프로그램7">
+                    <label for="p_btn7"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/7.jpg" alt="프로그램" title="프로그램">
                     <p>책 속에서 사람을 만나다</p>
                 </div>
             </div>
-            <div class="p_modal8 p_modal">
+            <div class="p_modal p_modal8">
                 <div>
-                    <label for="p_modalBtn8"><i class="fa-solid fa-x"></i></label>
-                    <img src="../../RES/프로그램/8.jpg" alt="프로그램8" title="프로그램8">
+                    <label for="p_btn8"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/프로그램/8.jpg" alt="프로그램" title="프로그램">
                     <p>서울 문화의 밤(8월) 행사 - 국지승 그림책 작가와 방구석 북토크</p>
                 </div>
             </div>
         </section>
-        <section id="schedule" class="c_box">
+        <section class="c_box" id="schedule">
             <h1 class="title"><span>행사</span>달력</h1>
-            <div class="s_date">
+            <div class="s_btnBox">
                 <h1>2026년 <span>4월</span></h1>
-                <div class="s_btnBox">
+                <div>
                     <select>
                         <option value="2025">2025</option>
-                        <option value="2026" selected>2026</option>
+                        <option value="2026">2026</option>
                         <option value="2027">2027</option>
                     </select>
                     <select>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="4" selected>4</option>
+                        <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>
                         <option value="7">7</option>
@@ -357,21 +357,22 @@
                 </div>
             </div>
         </section>
-        <section id="reco_book" class="c_box">
+        <section class="c_box" id="reco_books">
             <h1 class="title"><span>추천</span>도서</h1>
             <input type="radio" name="carousel" id="car_1" hidden>
-            <input type="radio" name="carousel" id="car_2" hidden>
             <input type="radio" name="carousel" id="car_3" hidden checked>
-            <input type="radio" name="carousel" id="car_4" hidden>
             <input type="radio" name="carousel" id="car_5" hidden>
-            <input type="radio" name="carousel" id="car_6" hidden>
             <input type="radio" name="carousel" id="car_7" hidden>
-            <input type="radio" name="carousel" id="car_8" hidden>
             <input type="radio" name="carousel" id="car_9" hidden>
-            <input type="radio" name="carousel" id="car_10" hidden>
             <input type="radio" name="carousel" id="car_11" hidden>
-            <input type="radio" name="carousel" id="car_12" hidden>
             <input type="radio" name="carousel" id="car_13" hidden>
+
+            <input type="radio" name="carousel" id="car_2" hidden>
+            <input type="radio" name="carousel" id="car_4" hidden>
+            <input type="radio" name="carousel" id="car_6" hidden>
+            <input type="radio" name="carousel" id="car_8" hidden>
+            <input type="radio" name="carousel" id="car_10" hidden>
+            <input type="radio" name="carousel" id="car_12" hidden>
             <input type="radio" name="carousel" id="car_14" hidden>
 
             <div class="controls">
@@ -391,147 +392,149 @@
                 <label for="car_12" class="car_12 right"><i class="fa-solid fa-angle-right"></i></label>
                 <label for="car_14" class="car_14 right"><i class="fa-solid fa-angle-right"></i></label>
             </div>
-
+            
             <div class="carousel">
                 <div class="card_wrap card1">
                     <div class="card">
-                        <div class="reco_num">추천도서1/7</div>
+                        <div class="reco_num">추천도서 1/7</div>
                         <div class="reco_content">
                             <h2>나에게 나다움을 주기로 했다 : 나다움을 찾아가는 다섯 가지 마음 습관</h2>
                             <p>지은이 : 고정욱</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서1" title="추천도서1">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서2/7</div>
+                        <div class="reco_num">추천도서 2/7</div>
                         <div class="reco_content">
                             <h2>여름이 반짝</h2>
                             <p>지은이 : 김수빈</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서2.jpg" alt="추천도서2" title="추천도서2">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서2.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서3/7</div>
+                        <div class="reco_num">추천도서 3/7</div>
                         <div class="reco_content">
                             <h2>사랑 한 꼬집을 넣으면</h2>
                             <p>지은이 : 배리 팀스</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서3.jpg" alt="추천도서3" title="추천도서3">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서3.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서4/7</div>
+                        <div class="reco_num">추천도서 4/7</div>
                         <div class="reco_content">
                             <h2>정말 정말 소리 지르고 싶어!</h2>
                             <p>지은이 : 사이먼 필립</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서4.jpg" alt="추천도서4" title="추천도서4">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서4.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서5/7</div>
+                        <div class="reco_num">추천도서 5/7</div>
                         <div class="reco_content">
                             <h2>힐빌리의 노래 : 위기의 가정과 문화에 대한 회고</h2>
                             <p>지은이 : J.D 밴스</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서5.jpg" alt="추천도서5" title="추천도서5">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서5.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서6/7</div>
+                        <div class="reco_num">추천도서 6/7</div>
                         <div class="reco_content">
                             <h2>(허영만의) 커피 한잔 할까요?</h2>
                             <p>지은이 : 허영만</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서6.jpg" alt="추천도서6" title="추천도서6">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서6.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서7/7</div>
+                        <div class="reco_num">추천도서 7/7</div>
                         <div class="reco_content">
                             <h2>두더지의 여름: 김상근 그림책</h2>
                             <p>지은이 : 김상근</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서7.jpg" alt="추천도서7" title="추천도서7">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서7.jpg" alt="추천도서" title="추천도서">
                     </div>
 
                     <div class="card">
-                        <div class="reco_num">추천도서1/7</div>
+                        <div class="reco_num">추천도서 1/7</div>
                         <div class="reco_content">
                             <h2>나에게 나다움을 주기로 했다 : 나다움을 찾아가는 다섯 가지 마음 습관</h2>
                             <p>지은이 : 고정욱</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서1" title="추천도서1">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서" title="추천도서">
                     </div>
                 </div>
                 <div class="card_wrap card2">
                     <div class="card">
-                        <div class="reco_num">추천도서1/7</div>
+                        <div class="reco_num">추천도서 1/7</div>
                         <div class="reco_content">
                             <h2>나에게 나다움을 주기로 했다 : 나다움을 찾아가는 다섯 가지 마음 습관</h2>
                             <p>지은이 : 고정욱</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서1" title="추천도서1">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서2/7</div>
+                        <div class="reco_num">추천도서 2/7</div>
                         <div class="reco_content">
                             <h2>여름이 반짝</h2>
                             <p>지은이 : 김수빈</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서2.jpg" alt="추천도서2" title="추천도서2">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서2.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서3/7</div>
+                        <div class="reco_num">추천도서 3/7</div>
                         <div class="reco_content">
                             <h2>사랑 한 꼬집을 넣으면</h2>
                             <p>지은이 : 배리 팀스</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서3.jpg" alt="추천도서3" title="추천도서3">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서3.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서4/7</div>
+                        <div class="reco_num">추천도서 4/7</div>
                         <div class="reco_content">
                             <h2>정말 정말 소리 지르고 싶어!</h2>
                             <p>지은이 : 사이먼 필립</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서4.jpg" alt="추천도서4" title="추천도서4">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서4.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서5/7</div>
+                        <div class="reco_num">추천도서 5/7</div>
                         <div class="reco_content">
                             <h2>힐빌리의 노래 : 위기의 가정과 문화에 대한 회고</h2>
                             <p>지은이 : J.D 밴스</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서5.jpg" alt="추천도서5" title="추천도서5">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서5.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서6/7</div>
+                        <div class="reco_num">추천도서 6/7</div>
                         <div class="reco_content">
                             <h2>(허영만의) 커피 한잔 할까요?</h2>
                             <p>지은이 : 허영만</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서6.jpg" alt="추천도서6" title="추천도서6">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서6.jpg" alt="추천도서" title="추천도서">
                     </div>
                     <div class="card">
-                        <div class="reco_num">추천도서7/7</div>
+                        <div class="reco_num">추천도서 7/7</div>
                         <div class="reco_content">
                             <h2>두더지의 여름: 김상근 그림책</h2>
                             <p>지은이 : 김상근</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서7.jpg" alt="추천도서7" title="추천도서7">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서7.jpg" alt="추천도서" title="추천도서">
                     </div>
 
                     <div class="card">
-                        <div class="reco_num">추천도서1/7</div>
+                        <div class="reco_num">추천도서 1/7</div>
                         <div class="reco_content">
                             <h2>나에게 나다움을 주기로 했다 : 나다움을 찾아가는 다섯 가지 마음 습관</h2>
                             <p>지은이 : 고정욱</p>
-                        </div>
-                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서1" title="추천도서1">
+                        </div> 
+                        <img src="../../RES/추천도서/추천도서1.jpg" alt="추천도서" title="추천도서">
                     </div>
                 </div>
             </div>
         </section>
         <footer>
             <div class="f_top">
-                <div class="f_left"><img src="../../RES/images/logo.png" alt="logo" title="logo"></div>
+                <div class="f_left">
+                    <img src="../../RES/images/logo2.png" alt="logo" title="logo">
+                </div>
                 <div class="f_right">
                     <ul>
                         <li class="f_h">도서관소개</li>
@@ -554,14 +557,14 @@
                     <ul class="f_h">도서검색</ul>
                     <ul>|</ul>
                     <ul class="f_h">도서관리자</ul>
-                    <div class="f_bar"></div>
+                    <ul class="f_bar"></ul>
                     <ul>
                         <li class="f_h">Content</li>
-                        <li>문의전화안내 <br> 1644-8000 <br> 운영시간(평일) 09:00~18:00</li> 
-                        <div class="social_iconBox">
-                            <img src="../../RES/social/social icon1.jpg" alt="icon1" title="icon1">
-                            <img src="../../RES/social/social icon2.jpg" alt="icon2" title="icon2">
-                            <img src="../../RES/social/social icon3.jpg" alt="icon3" title="icon3">
+                        <li>문의전화안내 <br>1644-8000 <br> 운영시간(평일) 09:00~18:00</li>
+                        <div>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-instagram"></i>
                         </div>
                     </ul>
                 </div>
@@ -571,6 +574,6 @@
                 <p>COPYRIGHTⓒ 2016 HRDKOREA</p>
             </div>
         </footer>
-    </section>
+    </div>
 </body>
 </html>
