@@ -1,169 +1,135 @@
-:root {
-    /* 슬라이드 넓이 */
-    --card-width: 100%;
-    /* 이동 방향 */
-    --reverse-card: calc(var(--card-width) * -1);
-}
-
 #reco_books {
     position: relative;
-    p {
-        text-align: right;
-    }
 }
 
-/* 캐러셀 */
-.carousel {
-    position: relative;
-    width: var(--card-width);
-    height: 400px;
-    overflow: hidden;
-    margin-top: 30px;
-
-    .card_wrap {
-        position: absolute;
-        width: calc(100% * 8);
-        height: 100%;
-        display: flex;
-        &.card2 { left: calc(var(--reverse-card) * 7);
-                  visibility: hidden;
-        }
-        transition: .3s ease-in-out;
-
-        .card {
-            position: relative;
-            width: var(--card-width);
-            height: 100%;
-            background-color: var(--bg);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            padding: 50px;
-            border-top: 1px solid var(--main-color);
-            border-bottom: 1px solid var(--main-color);
-            background-color: #fff;
-            img {
-                width: 200px;
-            }
-            .reco_content {
-                div {
-                    width: 40px;
-                    height: 3px;
-                    border-radius: 50px;
-                    background-color: var(--main-color);
-                }
-                p {
-                    font-weight: lighter;
-                    font-size: 15px;
-                    margin-top: 10px;
-                }
-            }
-            .reco_num {
-                position: absolute;
-                top: 20px;
-                left: 50px;
-                color: var(--main-color);
-                font-size: 30px;
-            }
-        }
-    }
-}
-
-/* 컨트롤러 */
 .controls {
     label {
         position: absolute;
         top: 50%;
-        &.left { left: 8%; }
-        &.right { right: 8%; }
+        &.left{left: 8%;}
+        &.right{right: 8%;}
         width: 80px;
-        aspect-ratio: 1;
-        background-color: lightgray;
-        border-radius: 100%;
-        place-items: center;
-        font-size: 1.5rem;
-        cursor: pointer;
+        height: 80px;
+        border-radius: 50px;
+        background-color: var(--gray-color);
         display: grid;
-        z-index: 3;
+        place-items: center;
+        font-size: 30px;
         visibility: hidden;
-        i {
-            font-size: 30px;
+        z-index: 11;
+    }
+}
+
+.carousel {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-block: 1px solid var(--gray-color);
+    margin-top: 30px;
+    .card_wrap {
+        position: absolute;
+        display: flex;
+        width: 800%;
+        transition: all 0.4s;
+        &.card2 {
+            left: -700%;
+            visibility: hidden;
+        }
+        .card {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 50px 60px;
+            background-color: #fff;
+            .reco_num {
+                position: absolute;
+                top: 50px;
+                left: 60px;
+                color: var(--main-color);
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .reco_content {
+                p {
+                    margin-top: 5px;
+                    font-weight: lighter;
+                }
+            }
+            img {
+                width: 200px;
+            }
         }
     }
 }
 
-/* 좌우 버튼 제어 */
-#car_1:checked ~ .controls .car_13,
-#car_1:checked ~ .controls .car_14,
-#car_3:checked ~ .controls .car_1,
-#car_3:checked ~ .controls .car_2,
-#car_5:checked ~ .controls .car_3,
-#car_5:checked ~ .controls .car_4,
-#car_7:checked ~ .controls .car_5,
-#car_7:checked ~ .controls .car_6,
-#car_9:checked ~ .controls .car_7,
-#car_9:checked ~ .controls .car_8,
-#car_11:checked ~ .controls .car_9,
-#car_11:checked ~ .controls .car_10,
-#car_13:checked ~ .controls .car_11,
-#car_13:checked ~ .controls .car_12,
+#car_1:checked ~ .controls > .car_13,
+#car_1:checked ~ .controls > .car_14,
+#car_3:checked ~ .controls > .car_1,
+#car_3:checked ~ .controls > .car_2,
+#car_5:checked ~ .controls > .car_3,
+#car_5:checked ~ .controls > .car_4,
+#car_7:checked ~ .controls > .car_5,
+#car_7:checked ~ .controls > .car_6,
+#car_9:checked ~ .controls > .car_7,
+#car_9:checked ~ .controls > .car_8,
+#car_11:checked ~ .controls > .car_9,
+#car_11:checked ~ .controls > .car_10,
+#car_13:checked ~ .controls > .car_11,
+#car_13:checked ~ .controls > .car_12,
 
-#car_2:checked ~ .controls .car_3,
-#car_2:checked ~ .controls .car_4,
-#car_4:checked ~ .controls .car_5,
-#car_4:checked ~ .controls .car_6,
-#car_6:checked ~ .controls .car_7,
-#car_6:checked ~ .controls .car_8,
-#car_8:checked ~ .controls .car_9,
-#car_8:checked ~ .controls .car_10,
-#car_10:checked ~ .controls .car_11,
-#car_10:checked ~ .controls .car_12,
-#car_12:checked ~ .controls .car_13,
-#car_12:checked ~ .controls .car_14,
-#car_14:checked ~ .controls .car_1,
-#car_14:checked ~ .controls .car_2
-{
+#car_2:checked ~ .controls > .car_3,
+#car_2:checked ~ .controls > .car_4,
+#car_4:checked ~ .controls > .car_5,
+#car_4:checked ~ .controls > .car_6,
+#car_6:checked ~ .controls > .car_7,
+#car_6:checked ~ .controls > .car_8,
+#car_8:checked ~ .controls > .car_9,
+#car_8:checked ~ .controls > .car_10,
+#car_10:checked ~ .controls > .car_11,
+#car_10:checked ~ .controls > .car_12,
+#car_12:checked ~ .controls > .car_13,
+#car_12:checked ~ .controls > .car_14,
+#car_14:checked ~ .controls > .car_1,
+#car_14:checked ~ .controls > .car_2 {
     visibility: visible;
     transition-delay: 0.4s;
 }
 
-/* 왼쪽 | 이전 */
-#car_2:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 1); }
-#car_4:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 2); }
-#car_6:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 3); }
-#car_8:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 4); }
-#car_10:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 5); }
-#car_12:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 6); }
-#car_12:checked ~ .carousel .card2 { left: calc(var(--reverse-card) * 6); }
-#car_14:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 0); }
-#car_14:checked ~ .carousel .card2 { left: calc(var(--reverse-card) * 7); }
+#car_2:checked ~ .carousel > .card1 {left: calc(-100% * 1);}
+#car_4:checked ~ .carousel > .card1 {left: calc(-100% * 2);}
+#car_6:checked ~ .carousel > .card1 {left: calc(-100% * 3);}
+#car_8:checked ~ .carousel > .card1 {left: calc(-100% * 4);}
+#car_10:checked ~ .carousel > .card1 {left: calc(-100% * 5);}
+#car_12:checked ~ .carousel > .card1 {left: calc(-100% * 6);}
+#car_12:checked ~ .carousel > .card2 {left: calc(-100% * 6);}
+#car_14:checked ~ .carousel > .card1 {left: calc(-100% * 0);}
+#car_14:checked ~ .carousel > .card2 {left: calc(-100% * 7);}
 
-/* 오른쪽 | 다음 */
-#car_1:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 6); }
-#car_1:checked ~ .carousel .card2 { left: calc(var(--reverse-card) * 6); }
-#car_3:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 0); }
-#car_5:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 1); }
-#car_7:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 2); }
-#car_9:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 3); }
-#car_11:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 4); }
-#car_13:checked ~ .carousel .card1 { left: calc(var(--reverse-card) * 5); }
+#car_1:checked ~ .carousel > .card1 {left: calc(-100% * 6);}
+#car_1:checked ~ .carousel > .card2 {left: calc(-100% * 6);}
+#car_3:checked ~ .carousel > .card1 {left: calc(-100% * 0);}
+#car_5:checked ~ .carousel > .card1 {left: calc(-100% * 1);}
+#car_7:checked ~ .carousel > .card1 {left: calc(-100% * 2);}
+#car_9:checked ~ .carousel > .card1 {left: calc(-100% * 3);}
+#car_11:checked ~ .carousel > .card1 {left: calc(-100% * 4);}
+#car_13:checked ~ .carousel > .card1 {left: calc(-100% * 5);}
 
-/* 중첩 구간 트릭 */
-#car_14:checked ~ .carousel .card2,
-#car_2:checked ~ .carousel .card1,
-#car_1:checked ~ .carousel .card2,
-#car_13:checked ~ .carousel .card1
-{
-    z-index: 1;
+
+#car_14:checked ~ .carousel > .card2,
+#car_2:checked ~ .carousel > .card1,
+#car_1:checked ~ .carousel > .card2,
+#car_13:checked ~ .carousel > .card1 {
     visibility: visible;
+    z-index: 1;
 }
 
-#car_14:checked ~ .carousel .card1,
-#car_2:checked ~ .carousel .card2,
-#car_1:checked ~ .carousel .card1,
-#car_13:checked ~ .carousel .card2
-{
-    transition: .05s;
+#car_14:checked ~ .carousel > .card1,
+#car_2:checked ~ .carousel > .card2,
+#car_1:checked ~ .carousel > .card1,
+#car_13:checked ~ .carousel > .card2 {
     visibility: hidden;
+    transition: .05s;
 }

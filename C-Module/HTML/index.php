@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,25 +33,53 @@
         <header>
             <input type="checkbox" id="login" hidden>
             <div class="user">
+                <?php if(empty($_SESSION['id'])){?>
                 <div class="sign_in"><label for="login">로그인</label></div>
-                <div class="sign_up">회원가입</div>
+                <div class="sign_up" id="sign_up">회원가입</div>
+                <?php } else {?>
+                <p><?php echo $_SESSION['name'].'('.$_SESSION['id'].')' ?>님</p>
+                <div class="sign_up"><a href="logout.php">로그아웃</a></div>
+                <?php }?>
             </div>
+            <!-- 로그인 폼 -->
             <div class="login_modal">
-                <div class="login_box">
+                <form action="login.php" method="post" class="login_box">
                     <label for="login"><i class="fa-solid fa-x"></i></label>
                     <img src="../../RES/images/logo2.png" alt="logo" title="logo">
                     <div class="input_box">
                         <div class="input_warpper">
-                            <input type="text" id="email" required>
+                            <input type="text" name="id" id="email" required>
                             <span>Email</span>
                         </div>
                         <div class="input_warpper">
-                            <input type="password" id="password" required>
+                            <input type="password" name="pw" id="password" required>
                             <span>Password</span>
                         </div>
                     </div>
-                    <button type="button">로그인</button>
-                </div>
+                    <input type="submit" value="로그인" class="login-btn">
+                </form>
+            </div>
+            <!-- 회원가입 폼 -->
+            <div class="register_modal">
+                <form action="register.php" method="post" class="login_box">
+                    <label for="" onclick="removeModal()"><i class="fa-solid fa-x"></i></label>
+                    <img src="../../RES/images/logo2.png" alt="logo" title="logo">
+                    <div class="input_box">
+                        <div class="input_warpper">
+                            <input type="text" name="nm" id="re_name" required>
+                            <span>Name</span>
+                        </div>
+                        <div class="input_warpper">
+                            <input type="text" name="id" id="email" required>
+                            <span>Email</span>
+                        </div>
+                        <div class="input_warpper">
+                            <input type="password" name="pw" id="password" required>
+                            <span>Password</span>
+                        </div>
+                    </div>
+                    <input type="submit" value="회원가입" class="login-btn">
+                </form>
             </div>
             <div class="h_bottom">
                 <div class="logo"><a href="index.html"><img src="../../RES/images/logo2.png" alt="logo" title="logo"></a></div>
@@ -575,5 +604,7 @@
             </div>
         </footer>
     </div>
+    
+    <script src="../JS/script.js"></script>
 </body>
 </html>

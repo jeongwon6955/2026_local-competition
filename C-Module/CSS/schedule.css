@@ -1,66 +1,56 @@
-/* 행사달력 */
 #schedule {
-    .s_btnbox {
-        margin: 40px 0;
+    .s_btnBox {
         display: flex;
         justify-content: space-between;
-        .cale_date {
-            display: flex;
-            h1 {
-                margin-right: 20px;
-            }
-            .cale_month {
-                color: var(--main-color);
-            }
+        margin-top: 30px;
+        span {
+            color: var(--main-color);
+            margin-left: 10px;
         }
         select {
-            padding: 10px 20px;
-            border-radius: 50px;
-            border: none;
+            padding: 10px;
+            font-size: 18px;
             background-color: var(--main-color);
             color: white;
-            margin-right: 20px;
-            font-size: 18px;
+            margin-left: 10px;
         }
     }
     .calendar {
-        .cale_dayweek {
-            display: flex;
+        margin-top: 30px;
+        .c_red {
+            color: rgb(211, 50, 50);
+        }
+        .c_blue {
+            color: rgb(70, 70, 216);
+        }
+        .not_day {
+            color: rgba(0,0,0,0.2);
+        }
+        .c_week {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border-top: 1px solid var(--gray-color);
             padding-block: 10px;
-            border-top: 1px solid var(--gray-muted);
-            div {
-                width: 14.2857%;
-            }
         }
-        .cale_row {
-            display: flex;
-            border-top: 1px solid var(--gray-muted);
+        .c_day {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
             div {
-                width: 14.2857%;
                 height: 190px;
+                border-top: 1px solid var(--gray-color);
+                border-right: 1px solid var(--gray-color);
                 padding: 10px;
-                border-right: 1px solid var(--gray-muted);
-                span {
-                    display: block;
-                    width: fit-content;
-                    font-size: 11px;
-                    background-color: var(--main-light);
-                    color: white;
-                    padding: 5px;
-                    margin-top: 5px;
-                    font-weight: bold;
-                }
             }
-            .not_day {
-                color: var(--gray-muted);
+            .c_blue {
+                border-right: none;
+            }
+            p {
+                padding: 5px;
+                margin-top: 5px;
+                color: white;
+                background-color: var(--main-color);
+                font-size: 12px;
             }
         }
-        .cale_weekendblue {
-            color: blue;
-            border-right: none !important;
-        }
-        .cale_weekendred {
-            color: red;
-        }
-    } 
+    }
 }
